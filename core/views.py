@@ -6,6 +6,8 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 from classes.Pessoa import Pessoa
 from classes.Professor import Professor
 
@@ -46,7 +48,9 @@ def submit_login(request):
         if len(query) == 1:
             for doc in query:
                 if doc.get('username') == username and doc.get('senha') == password:
-                    return redirect('/principal')
+                    #login(request, doc)
+                    main_page(doc)
+                    return
     # doc = doc_ref.get()
     # if doc.exists:
     #    print(f'Document data: {doc.to_dict()}')
@@ -57,10 +61,12 @@ def main_page(request):
     return render(request, 'main_page.html')
 
 
+@login_required(login_url='/login/')
 def add_user(request):
     return render(request, 'create_new_user_page.html')
 
 
+@login_required(login_url='/login/')
 def submit_user(request):
     if request.POST:
         username = request.POST.get('username')
@@ -82,4 +88,9 @@ def submit_user(request):
         else:
             raise Exception("erro de senha")
 
+    return redirect('/')
+
+
+def logout_user(request):
+    #logout(request)
     return redirect('/')

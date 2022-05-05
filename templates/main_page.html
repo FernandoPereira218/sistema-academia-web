@@ -6,5 +6,10 @@
 </head>
 <body>
     <h1>Tela Principal</h1>
+    <br>
+    {% if doc.username == 'admin' %}
+    <a href="/cadastro/">Cadastro</a>
+    {% endif %}
+    <a href="/logout/">Logout</a>
 </body>
 </html>
