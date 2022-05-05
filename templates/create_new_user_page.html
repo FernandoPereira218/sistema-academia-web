@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="submit_user" method="POST"> {% csrf_token %}
+    <label>Nome de Usuário:</label>
+    <input type="text" name="username">
+    <label>Senha:</label>
+    <input type="password" name="password">
+    <button type="submit">Cadastrar</button>
+</form>
+</body>
+</html>
