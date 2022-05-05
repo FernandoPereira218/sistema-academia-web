@@ -5,8 +5,9 @@ from django.shortcuts import render, redirect
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-
+from django.contrib import messages
 from classes.Pessoa import Pessoa
+from classes.Professor import Professor
 
 cred = credentials.Certificate('sistema-academia-db-auth.json')
 firebase_admin.initialize_app(cred)
@@ -20,12 +21,12 @@ def login_page(request):
 
 
 def teste_db(request):
-    #doc_ref = db.collection(u'users').document(u'nomenovo')
-    #doc_ref.set({
+    # doc_ref = db.collection(u'users').document(u'nomenovo')
+    # doc_ref.set({
     #    u'username': u'adad',
     #    u'lastname': u'123',
     #    u'born': 4567
-    #})
+    # })
     users_ref = db.collection(u'users')
     docs = users_ref.stream()
 
@@ -39,15 +40,21 @@ def submit_login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        doc_ref = db.collection('users').document('doc1')
-        doc = doc_ref.get()
-        if doc.exists:
-            print(f'Document data: {doc.to_dict()}')
+        users_collection = db.collection('Professor')
+        query = users_collection.where('username', '==', username).get()
+
+        if len(query) == 1:
+            for doc in query:
+                if doc.get('username') == username and doc.get('senha') == password:
+                    return redirect('/principal')
+    # doc = doc_ref.get()
+    # if doc.exists:
+    #    print(f'Document data: {doc.to_dict()}')
     return redirect('/')
 
 
 def main_page(request):
-    return render(request, 'add_user_page.html')
+    return render(request, 'main_page.html')
 
 
 def add_user(request):
@@ -57,11 +64,22 @@ def add_user(request):
 def submit_user(request):
     if request.POST:
         username = request.POST.get('username')
+        name = request.POST.get('fullname')
         password = request.POST.get('password')
+        confirm_password = request.POST.get('confirm_password')
+        cpf = request.POST.get('cpf')
+        email = request.POST.get('email')
+        users_collection = db.collection('Professor')
+        query = users_collection.where('username', '==', username).get()
+        if len(query) != 0:
+            return redirect('/')
 
-        pessoa = Pessoa(nome=username, cpf=password, email='')
+        if password == confirm_password:
+            pessoa = Professor(nome=name, cpf=cpf, email=email, senha=password, username=username)
+            obj = pessoa.converter_objeto()
+            doc_ref = db.collection('Professor').document()
+            doc_ref.set(obj)
+        else:
+            raise Exception("erro de senha")
 
-        teste = pessoa.converter_objeto()
-        doc_ref = db.collection('Pessoa').document()
-        doc_ref.set(teste)
     return redirect('/')

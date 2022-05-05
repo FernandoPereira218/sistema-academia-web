@@ -1,0 +1,2 @@
+class Treino:
+    pass

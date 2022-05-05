@@ -2,15 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
-<form action="submit_user" method="POST"> {% csrf_token %}
-    <label>Nome de Usuário:</label>
-    <input type="text" name="username">
-    <label>Senha:</label>
-    <input type="password" name="password">
-    <button type="submit">Cadastrar</button>
-</form>
+<h1 align="center">Cadastro</h1>
+<div align="center">
+    <form action="submit_user" method="POST"> {% csrf_token %}
+        <label>Nome de usuário:</label>
+        <input type="text" name="username">
+        <br>
+        <label>Nome completo:</label>
+        <input type="text" name="fullname">
+        <br>
+        <label>CPF:</label>
+        <input type="text" name="cpf">
+        <br>
+        <label>Email:</label>
+        <input type="text" name="email">
+        <br>
+        <label>Senha:</label>
+        <input type="password" name="password">
+        <br>
+        <label>Confirmar senha:</label>
+        <input type="password" name="confirm_password">
+        <br>
+        <button type="submit">Cadastrar</button>
+        <br>
+    </form>
+    <form action="/login/" method="get">
+        <button type="submit">Voltar</button>
+    </form>
+</div>
 </body>
 </html>

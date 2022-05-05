@@ -1,12 +1,16 @@
 class Pessoa:
-    def __init__(self, nome, cpf, email):
+    def __init__(self, username, nome, cpf, email, senha):
+        self.username = username
         self.nome = nome
         self.cpf = cpf
         self.email = email
+        self.senha = senha
 
     def converter_objeto(self):
         return {
             "nome": self.nome,
             "cpf": self.cpf,
-            "email": self.email
+            "email": self.email,
+            "senha": self.senha,
+            "username": self.username,
         }
