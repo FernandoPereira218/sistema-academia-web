@@ -3,6 +3,7 @@
 import os
 import sys
 
+global current_user
 
 def main():
     """Run administrative tasks."""

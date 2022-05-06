@@ -8,6 +8,8 @@ from firebase_admin import firestore
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+
+import manage
 from classes.Pessoa import Pessoa
 from classes.Professor import Professor
 
@@ -16,7 +18,7 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-
+#current_user = None
 # Create your views here.
 def login_page(request):
     return render(request, 'login_page.html')
@@ -49,8 +51,10 @@ def submit_login(request):
             for doc in query:
                 if doc.get('username') == username and doc.get('senha') == password:
                     #login(request, doc)
-                    main_page(doc)
-                    return
+
+                    manage.current_user = set_current_user(doc)
+                    #return render(request, 'main_page.html', dados)
+                    return redirect('/principal/')
     # doc = doc_ref.get()
     # if doc.exists:
     #    print(f'Document data: {doc.to_dict()}')
@@ -58,15 +62,15 @@ def submit_login(request):
 
 
 def main_page(request):
-    return render(request, 'main_page.html')
+    dados = {}
+    dados['current_user'] = manage.current_user
+    return render(request, 'main_page.html', dados)
 
 
-@login_required(login_url='/login/')
 def add_user(request):
     return render(request, 'create_new_user_page.html')
 
 
-@login_required(login_url='/login/')
 def submit_user(request):
     if request.POST:
         username = request.POST.get('username')
@@ -92,5 +96,16 @@ def submit_user(request):
 
 
 def logout_user(request):
-    #logout(request)
+    manage.current_user = None
     return redirect('/')
+
+
+def set_current_user(data):
+    usuario = Pessoa(
+        username=data.get('username'),
+        senha=data.get('senha'),
+        cpf=data.get('cpf'),
+        email=data.get('email'),
+        nome=data.get('nome')
+    )
+    return usuario

@@ -5,9 +5,9 @@
     <title>Principal</title>
 </head>
 <body>
-    <h1>Tela Principal</h1>
+    <h1>Tela Principal {{ current_user.username }} </h1>
     <br>
-    {% if doc.username == 'admin' %}
+    {% if current_user.username == 'admin' %}
     <a href="/cadastro/">Cadastro</a>
     {% endif %}
     <a href="/logout/">Logout</a>

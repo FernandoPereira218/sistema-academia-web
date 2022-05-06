@@ -14,3 +14,10 @@ class Pessoa:
             "senha": self.senha,
             "username": self.username,
         }
+
+    def converter_json(self, dados):
+        self.nome = dados.get('nome')
+        self.cpf = dados.get('cpf')
+        self.email = dados.get('email')
+        self.senha = dados.get('senha')
+        self.username = dados.get('username')
