@@ -28,5 +28,8 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/login/')),
     path('cadastro/', views.add_user),
     path('cadastro/submit_user', views.submit_user),
-    path('logout/', views.logout_user)
+    path('logout/', views.logout_user),
+    path('cadastro_aluno/', views.cadastrar_aluno),
+    path('cadastro_aluno/submit_aluno', views.submit_aluno),
+    path('consulta_aluno/', views.consultar_aluno),
 ]

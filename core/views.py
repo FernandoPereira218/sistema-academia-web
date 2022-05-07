@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 import manage
+from classes.Aluno import Aluno
 from classes.Pessoa import Pessoa
 from classes.Professor import Professor
 
@@ -71,7 +72,7 @@ def add_user(request):
     return render(request, 'create_new_user_page.html')
 
 
-def submit_user(request):
+def submit_user(request, db_collection='Professor'):
     if request.POST:
         username = request.POST.get('username')
         name = request.POST.get('fullname')
@@ -79,15 +80,18 @@ def submit_user(request):
         confirm_password = request.POST.get('confirm_password')
         cpf = request.POST.get('cpf')
         email = request.POST.get('email')
-        users_collection = db.collection('Professor')
+        users_collection = db.collection(db_collection)
         query = users_collection.where('username', '==', username).get()
         if len(query) != 0:
             return redirect('/')
 
         if password == confirm_password:
-            pessoa = Professor(nome=name, cpf=cpf, email=email, senha=password, username=username)
+            if db_collection == 'Professor':
+                pessoa = Professor(nome=name, cpf=cpf, email=email, senha=password, username=username)
+            else:
+                pessoa = Aluno(nome=name, cpf=cpf, email=email, senha=password, username=username)
             obj = pessoa.converter_objeto()
-            doc_ref = db.collection('Professor').document()
+            doc_ref = db.collection(db_collection).document()
             doc_ref.set(obj)
         else:
             raise Exception("erro de senha")
@@ -109,3 +113,29 @@ def set_current_user(data):
         nome=data.get('nome')
     )
     return usuario
+
+
+def cadastrar_aluno(request):
+    return render(request, 'register_student.html')
+
+
+def submit_aluno(request):
+    submit_user(request, 'Aluno')
+    return redirect('/')
+
+
+def consultar_aluno(request):
+    teste = db.collection('Aluno').get()
+    lista = []
+    for doc in teste:
+        temp = Pessoa(
+            username=doc.get('username'),
+            nome=doc.get('nome'),
+            senha=doc.get('senha'),
+            cpf=doc.get('cpf'),
+            email=doc.get('email')
+        )
+        lista.append(temp)
+    dados = {}
+    dados['student_list'] = lista
+    return render(request, 'search_student.html', dados)

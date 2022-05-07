@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta</title>
+</head>
+<body>
+    <label>Aluno: </label>
+    <input type="text" name="student_username">
+    <br>
+    {% for student in student_list %}
+    <a>{{ student.username }}</a>
+    <br>
+    {% endfor %}
+</body>
+</html>
