@@ -19,7 +19,8 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-#current_user = None
+
+# current_user = None
 # Create your views here.
 def login_page(request):
     return render(request, 'login_page.html')
@@ -51,10 +52,10 @@ def submit_login(request):
         if len(query) == 1:
             for doc in query:
                 if doc.get('username') == username and doc.get('senha') == password:
-                    #login(request, doc)
+                    # login(request, doc)
 
                     manage.current_user = set_current_user(doc)
-                    #return render(request, 'main_page.html', dados)
+                    # return render(request, 'main_page.html', dados)
                     return redirect('/principal/')
     # doc = doc_ref.get()
     # if doc.exists:
@@ -135,7 +136,27 @@ def consultar_aluno(request):
             cpf=doc.get('cpf'),
             email=doc.get('email')
         )
+        temp.id = doc.id
         lista.append(temp)
     dados = {}
     dados['student_list'] = lista
     return render(request, 'search_student.html', dados)
+
+
+def buscar_aluno(request, id_aluno):
+    doc_ref = db.collection('Aluno').document(id_aluno).get()
+    # query = users_collection.where(firestore.FieldPath.documentId(), '==', id_aluno).get()
+    if doc_ref == None:
+        return redirect('/')
+    dados = {}
+    # for doc in query:
+    temp = Pessoa(
+        username=doc_ref.get('username'),
+        nome=doc_ref.get('nome'),
+        senha=doc_ref.get('senha'),
+        cpf=doc_ref.get('cpf'),
+        email=doc_ref.get('email')
+    )
+    aluno_id = doc_ref.id
+    dados['aluno'] = temp
+    return render(request, 'student_page.html', dados)

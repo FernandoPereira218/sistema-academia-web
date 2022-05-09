@@ -32,4 +32,5 @@ urlpatterns = [
     path('cadastro_aluno/', views.cadastrar_aluno),
     path('cadastro_aluno/submit_aluno', views.submit_aluno),
     path('consulta_aluno/', views.consultar_aluno),
+    path('consulta_aluno/<id_aluno>', views.buscar_aluno),
 ]

@@ -9,7 +9,7 @@
     <input type="text" name="student_username">
     <br>
     {% for student in student_list %}
-    <a>{{ student.username }}</a>
+    <a href="/consulta_aluno/{{ student.id }}">{{ student.username }}</a>
     <br>
     {% endfor %}
 </body>
