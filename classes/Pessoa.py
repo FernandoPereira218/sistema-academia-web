@@ -13,6 +13,7 @@ class Pessoa:
             "email": self.email,
             "senha": self.senha,
             "username": self.username,
+            "treinamento": self.treinamento,
         }
 
     def converter_json(self, dados):
