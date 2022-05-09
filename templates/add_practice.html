@@ -11,7 +11,7 @@
     <div id="exercicios" name="lista_exercicios">
         <br>
         <label>Exercício:</label>
-        <select name="exercicios">
+        <select name="exercicios" size="8">
             <option value="none"></option>
             {% for exercicio in exercicios %}
             <option value="{{ exercicio.nome }}">{{ exercicio.nome }}</option>
@@ -27,6 +27,42 @@
 <button onclick="buscar_elementos()">Teste</button>
 
 
+<form method="POST" action="criar_treino/submit"> {% csrf_token %}
+    <table id="tabela">
+        <tr>
+            <th>
+                Exercicio
+            </th>
+            <th>
+                Séries
+            </th>
+            <th>
+                Repetições
+            </th>
+        </tr>
+
+        <tr id="linhas" name="linhas">
+            <td>
+                <select name="exercicios" id="id_select">
+                    <option value="none"></option>
+                    {% for exercicio in exercicios %}
+                    <option value="{{ exercicio.nome }}">{{ exercicio.nome }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <input type="number" name="series">
+            </td>
+            <td>
+                <input type="number" name="repeticoes">
+            </td>
+        </tr>
+    </table>
+    <input type="text" id="testes" name="testes2">
+    <button type="submit" onclick="superTeste()">Registrar</button>
+</form>
+
+<button onclick="inserirExercicio()">Inserir Exercicio</button>
 
 <script type="text/javascript">
 function teste(){
@@ -40,6 +76,33 @@ function teste(){
 function buscar_elementos(){
     const elementos = document.getElementsByName("lista_exercicios");
     console.log(elementos);
+}
+
+function inserirExercicio(){
+    const elementos = document.getElementsByName('linhas');
+    var count = elementos.length;
+    const linha = document.getElementById("linhas");
+    const clone = linha.cloneNode(true);
+
+    const tabela = document.getElementById("tabela");
+    tabela.appendChild(clone);
+}
+
+function superTeste(){
+    const elementos = document.getElementsByName('linhas');
+    var resultado = '';
+    var array = [];
+    for(var i = 0; i < elementos.length; i++){
+        console.log(elementos[i].children[0].children[0]);
+        //var exercicio = elementos[i].getElementById('id_select');
+        array.push({
+            'Exercicio': elementos[i].children[0].children[0].value,
+            'Series': elementos[i].children[1].children[0].value,
+            'Repeticoes': elementos[i].children[2].children[0].value,
+        });
+    }
+    const testes = document.getElementById('testes');
+    testes.value = array;
 }
 
 

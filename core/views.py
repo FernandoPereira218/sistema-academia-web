@@ -184,5 +184,27 @@ def criar_treino(request, id_aluno):
 
 def submit_treino(request, id_aluno):
     if request.POST:
-        username = request.POST.get('lista_exercicios')
-        teste = ''
+        exercicios = request.POST.getlist('exercicios')
+        series = request.POST.getlist('series')
+        repeticoes = request.POST.getlist('repeticoes')
+        treinamento = []
+        for i in range(len(exercicios)):
+            treinamento.append({
+                'Exercicio': exercicios[i],
+                'Series': series[i],
+                'Repeticoes': repeticoes[i],
+            })
+
+    aluno = db.collection('Aluno').document(id_aluno).get()
+    temp = Pessoa(
+        username=aluno.get('username'),
+        nome=aluno.get('nome'),
+        senha=aluno.get('senha'),
+        cpf=aluno.get('cpf'),
+        email=aluno.get('email')
+    )
+    temp.treinamento = treinamento
+    objeto = temp.converter_objeto()
+    doc_ref = db.collection('Aluno').document(id_aluno)
+    doc_ref.set(objeto)
+    return redirect('/consulta_aluno/' + id_aluno)
