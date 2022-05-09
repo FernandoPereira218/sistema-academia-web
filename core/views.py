@@ -11,6 +11,7 @@ from django.contrib.auth import authenticate, login, logout
 
 import manage
 from classes.Aluno import Aluno
+from classes.Exercicio import Exercicio
 from classes.Pessoa import Pessoa
 from classes.Professor import Professor
 
@@ -64,8 +65,7 @@ def submit_login(request):
 
 
 def main_page(request):
-    dados = {}
-    dados['current_user'] = manage.current_user
+    dados = {'current_user': manage.current_user}
     return render(request, 'main_page.html', dados)
 
 
@@ -138,18 +138,15 @@ def consultar_aluno(request):
         )
         temp.id = doc.id
         lista.append(temp)
-    dados = {}
-    dados['student_list'] = lista
+    dados = {'student_list': lista}
     return render(request, 'search_student.html', dados)
 
 
 def buscar_aluno(request, id_aluno):
     doc_ref = db.collection('Aluno').document(id_aluno).get()
-    # query = users_collection.where(firestore.FieldPath.documentId(), '==', id_aluno).get()
-    if doc_ref == None:
+    if doc_ref is None:
         return redirect('/')
     dados = {}
-    # for doc in query:
     temp = Pessoa(
         username=doc_ref.get('username'),
         nome=doc_ref.get('nome'),
@@ -157,6 +154,35 @@ def buscar_aluno(request, id_aluno):
         cpf=doc_ref.get('cpf'),
         email=doc_ref.get('email')
     )
-    aluno_id = doc_ref.id
+    temp.id = doc_ref.id
     dados['aluno'] = temp
     return render(request, 'student_page.html', dados)
+
+
+def criar_treino(request, id_aluno):
+    doc_ref = db.collection('Aluno').document(id_aluno).get()
+    temp = Pessoa(
+        username=doc_ref.get('username'),
+        nome=doc_ref.get('nome'),
+        senha=doc_ref.get('senha'),
+        cpf=doc_ref.get('cpf'),
+        email=doc_ref.get('email')
+    )
+    temp.id = doc_ref.id
+    exercicios = db.collection('Exercicio').get()
+    lista_exercicios = []
+    for doc in exercicios:
+        exercicio = Exercicio()
+        exercicio.nome = doc.get('Nome')
+        lista_exercicios.append(exercicio)
+    dados = {
+        'aluno': temp,
+        'exercicios': lista_exercicios
+    }
+    return render(request, 'add_practice.html', dados)
+
+
+def submit_treino(request, id_aluno):
+    if request.POST:
+        username = request.POST.get('lista_exercicios')
+        teste = ''

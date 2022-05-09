@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Treino</title>
+</head>
+<body>
+<h1>Criação de Treino</h1>
+<button onclick="teste()">+</button>
+<form action="criar_treino/submit" method="POST"> {% csrf_token %}
+    <div id="exercicios" name="lista_exercicios">
+        <br>
+        <label>Exercício:</label>
+        <select name="exercicios">
+            <option value="none"></option>
+            {% for exercicio in exercicios %}
+            <option value="{{ exercicio.nome }}">{{ exercicio.nome }}</option>
+            {% endfor %}
+        </select>
+        <label>Repetições:</label>
+        <input type="number">
+        <label>Séries:</label>
+        <input type="number">
+    </div>
+    <button type="submit">Salvar</button>
+</form>
+<button onclick="buscar_elementos()">Teste</button>
+
+
+
+<script type="text/javascript">
+function teste(){
+    const elemento = document.getElementById("exercicios");
+    document.body.appendChild(elemento);
+    const node = document.getElementById("exercicios");
+    const clone = node.cloneNode(true);
+    document.body.appendChild(clone);
+}
+
+function buscar_elementos(){
+    const elementos = document.getElementsByName("lista_exercicios");
+    console.log(elementos);
+}
+
+
+</script>
+</body>
+
+</html>
