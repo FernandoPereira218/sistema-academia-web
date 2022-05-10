@@ -155,6 +155,7 @@ def buscar_aluno(request, id_aluno):
         email=doc_ref.get('email')
     )
     temp.id = doc_ref.id
+    temp.treinamento = doc_ref.get('treinamento')
     dados['aluno'] = temp
     return render(request, 'student_page.html', dados)
 
