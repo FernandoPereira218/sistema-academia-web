@@ -19,9 +19,26 @@
     </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Sistema de Academia</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/consulta_aluno/">Consultar aluno</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <form class="formulario">
-    <h1>Essa é a página do {{ aluno.username }}</h1>
-    <table class="col-md-6 table table-dark table-hover">
+    <h1 class="text-center">Ficha do {{ aluno.username }}</h1>
+    <p class="text-center">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um PDF ou editar o treino clicando nos <b>botões abaixo</b></p>
+    <table class="table table-dark table-borderless">
       <thead>
         <tr>
           <th scope="col">Exercicio</th>
