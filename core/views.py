@@ -147,7 +147,7 @@ def buscar_aluno(request, id_aluno):
     if doc_ref is None:
         return redirect('/')
     dados = {}
-    temp = Pessoa(
+    temp = Aluno(
         username=doc_ref.get('username'),
         nome=doc_ref.get('nome'),
         senha=doc_ref.get('senha'),
@@ -157,6 +157,8 @@ def buscar_aluno(request, id_aluno):
     temp.id = doc_ref.id
     temp.treinamento = doc_ref.get('treinamento')
     dados['aluno'] = temp
+    dados['dias_semana'] = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
+    dados['lista_treino'] = temp.treinamento
     return render(request, 'student_page.html', dados)
 
 
@@ -188,9 +190,11 @@ def submit_treino(request, id_aluno):
         exercicios = request.POST.getlist('exercicios')
         series = request.POST.getlist('series')
         repeticoes = request.POST.getlist('repeticoes')
-        treinamento = []
+        diaSemana = request.POST.get('dia_semana')
+        treinamento = {}
+        treinamento[diaSemana] = []
         for i in range(len(exercicios)):
-            treinamento.append({
+            treinamento[diaSemana].append({
                 'Exercicio': exercicios[i],
                 'Series': series[i],
                 'Repeticoes': repeticoes[i],

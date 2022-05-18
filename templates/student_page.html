@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
@@ -16,46 +17,74 @@
         body{
             background-color: black;
         }
+
     </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Sistema de Academia</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/consulta_aluno/">Consultar aluno</a>
-      </li>
-    </ul>
-  </div>
+    <a class="navbar-brand" href="#">Sistema de Academia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/consulta_aluno/">Consultar aluno</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 <form class="formulario">
     <h1 class="text-center">Ficha do {{ aluno.username }}</h1>
-    <p class="text-center">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um PDF ou editar o treino clicando nos <b>botões abaixo</b></p>
-    <table class="table table-dark table-borderless">
-      <thead>
+    <p class="text-center">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um PDF ou
+        editar o treino clicando nos <b>botões abaixo</b></p>
+
+    {% for dia in dias_semana %}
+    <div>
+        <table class="table table-dark table-borderless">
+        <thead>
+        <h3>{{ dia }}</h3>
         <tr>
-          <th scope="col">Exercicio</th>
-          <th scope="col">Series</th>
-          <th scope="col">Repeticoes</th>
+            <th scope="col">Exercicio</th>
+            <th scope="col">Series</th>
+            <th scope="col">Repeticoes</th>
         </tr>
-      </thead>
-      <tbody>
-      {% for treino in aluno.treinamento %}
+        </thead>
+        <tbody>
+<!--        {% for treino in aluno.treinamento.items %}-->
+<!--        <tr>-->
+<!--&lt;!&ndash;            <th scope="row">{{aluno.treinamento.Exercicio}}</th>&ndash;&gt;-->
+<!--            <th scope="row"> {{aluno|get_treino:"Quarta" }} + {{treino}}</th>-->
+<!--            <td>{{treino.Series}}</td>-->
+<!--            <td>{{treino.Repeticoes}}</td>-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+
+        {% for key, value in aluno.treinamento.items %}
+        {% for i in value %}
+        <p>{{aluno|get_treino:key}}</p>
         <tr>
-          <th scope="row">{{treino.Exercicio}}</th>
-          <td>{{treino.Series}}</td>
-          <td>{{treino.Repeticoes}}</td>
+            <th scope="row">{{i.Exercicio}}</th>
+            <td>{{i.Series}}</td>
+            <td>{{i.Repeticoes}}</td>
         </tr>
-      {% endfor %}
-      </tbody>
+        {% endfor %}
+        {% endfor %}
+        </tbody>
     </table>
+    </div>
+    {% endfor %}
+
+    {% for key, value in aluno.treinamento.items %}
+    <p>{{ aluno.treinamento }} + {{key}} + {{value}}</p>
+    <br>
+    <p>{{ aluno|get_treino:'Quarta' }}</p>
+    <!--<p> aluno.get_treino('Terça') </p>-->
+    {% endfor %}
     <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/criar_treino">Criar Treino</a>
     <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/modificar">Modificar Treino</a>
 </form>
