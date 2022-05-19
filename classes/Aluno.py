@@ -8,14 +8,19 @@ from classes.Pessoa import Pessoa
 
 class Aluno(Pessoa):
     def __init__(self, username, nome, cpf, email, senha):
-        treinamento = {
-            "Segunda": {},
-            "Terça": {},
-            "Quarta": {},
-            "Quinta": {},
-            "Sexta": {},
-            "Sábado": {},
-            "Domingo": {},
+        self.username = username
+        self.nome = nome
+        self.cpf = cpf
+        self.email = email
+        self.senha = senha
+        self.treinamento = {
+            "Segunda": [],
+            "Terça": [],
+            "Quarta": [],
+            "Quinta": [],
+            "Sexta": [],
+            "Sábado": [],
+            "Domingo": [],
         }
 
     @register.filter

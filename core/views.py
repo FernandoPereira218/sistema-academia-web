@@ -155,10 +155,13 @@ def buscar_aluno(request, id_aluno):
         email=doc_ref.get('email')
     )
     temp.id = doc_ref.id
-    temp.treinamento = doc_ref.get('treinamento')
+
+    try:
+        temp.treinamento = doc_ref.get('treinamento')
+    except:
+        pass
     dados['aluno'] = temp
     dados['dias_semana'] = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
-    dados['lista_treino'] = temp.treinamento
     return render(request, 'student_page.html', dados)
 
 
@@ -191,25 +194,44 @@ def submit_treino(request, id_aluno):
         series = request.POST.getlist('series')
         repeticoes = request.POST.getlist('repeticoes')
         diaSemana = request.POST.get('dia_semana')
-        treinamento = {}
-        treinamento[diaSemana] = []
+
+        aluno = db.collection('Aluno').document(id_aluno).get()
+        temp = Aluno(
+            username=aluno.get('username'),
+            nome=aluno.get('nome'),
+            senha=aluno.get('senha'),
+            cpf=aluno.get('cpf'),
+            email=aluno.get('email')
+        )
+        try:
+            temp.treinamento = aluno.get('treinamento')
+        except:
+            pass
+        temp.treinamento[diaSemana] = []
         for i in range(len(exercicios)):
-            treinamento[diaSemana].append({
+            temp.treinamento[diaSemana].append({
                 'Exercicio': exercicios[i],
                 'Series': series[i],
                 'Repeticoes': repeticoes[i],
             })
 
-    aluno = db.collection('Aluno').document(id_aluno).get()
-    temp = Pessoa(
-        username=aluno.get('username'),
-        nome=aluno.get('nome'),
-        senha=aluno.get('senha'),
-        cpf=aluno.get('cpf'),
-        email=aluno.get('email')
-    )
-    temp.treinamento = treinamento
     objeto = temp.converter_objeto()
     doc_ref = db.collection('Aluno').document(id_aluno)
     doc_ref.set(objeto)
     return redirect('/consulta_aluno/' + id_aluno)
+
+
+def alterar_treino(request, id_aluno):
+    aluno = db.collection('Aluno').document(id_aluno).get()
+    temp = Aluno(
+        username=aluno.get('username'),
+        nome=aluno.get('nome'),
+        cpf=aluno.get('cpf'),
+        email=aluno.get('email'),
+        senha=aluno.get('senha')
+    )
+    temp.treinamento = aluno.get('treinamento')
+
+    dados = {}
+    dados['aluno'] = temp
+    return render(request, 'alter_practice.html', dados)

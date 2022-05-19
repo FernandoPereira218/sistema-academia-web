@@ -18,6 +18,7 @@
             background-color: black;
         }
 
+
     </style>
 </head>
 <body>
@@ -46,47 +47,37 @@
     {% for dia in dias_semana %}
     <div>
         <table class="table table-dark table-borderless">
-        <thead>
-        <h3>{{ dia }}</h3>
-        <tr>
-            <th scope="col">Exercicio</th>
-            <th scope="col">Series</th>
-            <th scope="col">Repeticoes</th>
-        </tr>
-        </thead>
-        <tbody>
-<!--        {% for treino in aluno.treinamento.items %}-->
-<!--        <tr>-->
-<!--&lt;!&ndash;            <th scope="row">{{aluno.treinamento.Exercicio}}</th>&ndash;&gt;-->
-<!--            <th scope="row"> {{aluno|get_treino:"Quarta" }} + {{treino}}</th>-->
-<!--            <td>{{treino.Series}}</td>-->
-<!--            <td>{{treino.Repeticoes}}</td>-->
-<!--        </tr>-->
-<!--        {% endfor %}-->
+            <thead>
+            <h3>{{ dia }}</h3>
+            <tr>
+                <th scope="col">Exercício</th>
+                <th scope="col">Séries</th>
+                <th scope="col">Repetições</th>
+            </tr>
+            </thead>
+            <tbody>
 
-        {% for key, value in aluno.treinamento.items %}
-        {% for i in value %}
-        <p>{{aluno|get_treino:key}}</p>
-        <tr>
-            <th scope="row">{{i.Exercicio}}</th>
-            <td>{{i.Series}}</td>
-            <td>{{i.Repeticoes}}</td>
-        </tr>
-        {% endfor %}
-        {% endfor %}
-        </tbody>
-    </table>
+            {% for teste, treino in aluno.treinamento.items %}
+            {% if teste == dia %}
+            {% for exercicio in treino %}
+            <tr>
+                <th scope="row">{{exercicio.Exercicio}}</th>
+                <td>{{exercicio.Series}}</td>
+                <td>{{exercicio.Repeticoes}}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+
+            </tbody>
+        </table>
     </div>
     {% endfor %}
 
-    {% for key, value in aluno.treinamento.items %}
-    <p>{{ aluno.treinamento }} + {{key}} + {{value}}</p>
-    <br>
-    <p>{{ aluno|get_treino:'Quarta' }}</p>
-    <!--<p> aluno.get_treino('Terça') </p>-->
-    {% endfor %}
+
     <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/criar_treino">Criar Treino</a>
-    <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/modificar">Modificar Treino</a>
+    <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/alterar_treino">Alterar Treino</a>
+    <a class="btn btn-secondary" href="">Gerar PDF</a>
 </form>
 
 </body>
