@@ -20,56 +20,49 @@
     </style>
 </head>
 <body>
-<form class = "formulario" method="POST" action="criar_treino/submit"> {% csrf_token %}
-    <h1 class="text-center">Criação de Treino</h1>
-    <div class="">
-        Dia da Semana:
-        <select name="dia_semana">
-            <option value="Segunda">Segunda</option>
-            <option value="Terça">Terça</option>
-            <option value="Quarta">Quarta</option>
-            <option value="Quinta">Quinta</option>
-            <option value="Sexta">Sexta</option>
-            <option value="Sábado">Sábado</option>
-            <option value="Domingo">Domingo</option>
-        </select>
-        <table id="tabela">
-        <tr>
-            <th>
-                Exercicio
-            </th>
-            <th>
-                Séries
-            </th>
-            <th>
-                Repetições
-            </th>
-        </tr>
-        <tr id="linhas" name="linhas">
-            <td>
-                <select class="form-control form-control" name="exercicios" id="id_select">
-                    <option value="none"></option>
-                    {% for exercicio in exercicios %}
-                    <option value="{{ exercicio.nome }}">{{ exercicio.nome }}</option>
-                    {% endfor %}
-                </select>
-            </td>
-            <td>
-                <input class="form-control form-control" type="number" name="series">
-            </td>
-            <td>
-                <input class="form-control form-control" type="number" name="repeticoes">
-            </td>
-            <td>
-                <button class="btn btn-danger" type="button" onclick="removerExercicio(this)">X</button>
-            </td>
-        </tr>
-    </table>
+<form class="formulario" method="POST" action="criar_treino/submit"> {% csrf_token %}
+    <h1 class="text-center">Criação de Treino de {{ aluno.username }}</h1>
+    {% for dia in dias_semana %}
+    <input type="hidden" value="{{ dia }}" name="dia_semana">
+    <div>
+        <table class="table table-dark table-borderless" id="tabela">
+            <thead>
+            <h3>{{ dia }}</h3>
+            <tr>
+                <th scope="col">Exercício</th>
+                <th scope="col">Séries</th>
+                <th scope="col">Repetições</th>
+                <th>
+                    <button class="btn btn-success" type="button" onclick="adicionarExercicio(this, '{{dia}}')">+</button>
+                </th>
+            </tr>
+            </thead>
+            <tbody id="body">
+            <tr id="linha_modelo_{{dia}}" hidden>
+                <td>
+                    <select class="form-control form-control" name="exercicios_{{dia}}" id="id_select">
+                        <option value="none"></option>
+                        {% for ex in exercicios %}
+                        <option value="{{ ex.nome }}">{{ ex.nome }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td>
+                    <input class="form-control form-control" type="number" name="series_{{dia}}">
+                </td>
+                <td>
+                    <input class="form-control form-control" type="number" name="repeticoes_{{dia}}">
+                </td>
+                <td>
+                    <button class="btn btn-danger" type="button" onclick="removerExercicio(this)">X</button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
     </div>
-    <br>
+    {% endfor %}
     <button class="btn btn-light" type="submit" onclick="superTeste()">Registrar</button>
-    <button class="btn btn-light" type="button" onclick="inserirExercicio()">Inserir Exercicio</button>
-    <button class="btn btn-light" type="button" onclick="history.back()">Voltar</button>
 </form>
 
 <script type="text/javascript">
@@ -88,11 +81,20 @@ function inserirExercicio(){
 
 
 function removerExercicio(botao){
-    var tabela = document.getElementById('tabela');
+    var tabela = botao.parentNode.parentNode.parentNode.parentNode;
     if(tabela.rows.length == 2){
         return;
     }
     tabela.deleteRow(botao.parentNode.parentNode.rowIndex);
+}
+
+function adicionarExercicio(botao, dia){
+    const modelo = document.getElementById('linha_modelo_' + dia);
+    const clone = modelo.cloneNode(true);
+    clone.hidden = false;
+    var table = botao.parentNode.parentNode.parentNode.parentNode;
+    var tbody = table.getElementsByTagName('tbody')[0];
+    tbody.appendChild(clone);
 }
 
 

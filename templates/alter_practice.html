@@ -38,14 +38,14 @@
                 <th scope="col">Séries</th>
                 <th scope="col">Repetições</th>
                 <th>
-                    <button class="btn btn-success" type="button" onclick="adicionarExercicio(this)">+</button>
+                    <button class="btn btn-success" type="button" onclick="adicionarExercicio(this, '{{dia}}')">+</button>
                 </th>
             </tr>
             </thead>
             <tbody id="body">
-            <tr id="linha_modelo" hidden>
+            <tr id="linha_modelo_{{dia}}" hidden>
                 <td>
-                    <select class="form-control form-control" name="exercicios" id="id_select">
+                    <select class="form-control form-control" name="exercicios_{{dia}}" id="id_select">
                         <option value="none"></option>
                         {% for ex in exercicios %}
                         <option value="{{ ex.nome }}">{{ ex.nome }}</option>
@@ -53,10 +53,10 @@
                     </select>
                 </td>
                 <td>
-                    <input class="form-control form-control" type="number" name="series">
+                    <input class="form-control form-control" type="number" name="series_{{dia}}">
                 </td>
                 <td>
-                    <input class="form-control form-control" type="number" name="repeticoes">
+                    <input class="form-control form-control" type="number" name="repeticoes_{{dia}}">
                 </td>
                 <td>
                     <button class="btn btn-danger" type="button" onclick="removerExercicio(this)">X</button>
@@ -65,15 +65,9 @@
             {% for teste, treino in aluno.treinamento.items %}
             {% if teste == dia %}
             {% for exercicio in treino %}
-            <!--            <tr>-->
-            <!--                <th scope="row">{{exercicio.Exercicio}}</th>-->
-            <!--                <td>{{exercicio.Series}}</td>-->
-            <!--                <td>{{exercicio.Repeticoes}}</td>-->
-            <!--            </tr>-->
-
             <tr id="linhas" name="linhas">
                 <td>
-                    <select class="form-control form-control" name="exercicios" id="select_id">
+                    <select class="form-control form-control" name="exercicios_{{dia}}" id="select_id">
                         <option value="none"></option>
                         {% for ex in exercicios %}
                         {% if ex.nome == exercicio.Exercicio %}
@@ -85,10 +79,10 @@
                     </select>
                 </td>
                 <td>
-                    <input class="form-control form-control" type="number" name="series" value="{{exercicio.Series}}">
+                    <input class="form-control form-control" type="number" name="series_{{dia}}" value="{{exercicio.Series}}">
                 </td>
                 <td>
-                    <input class="form-control form-control" type="number" name="repeticoes"
+                    <input class="form-control form-control" type="number" name="repeticoes_{{dia}}"
                            value="{{exercicio.Series}}">
                 </td>
                 <td>
@@ -103,8 +97,7 @@
         </table>
     </div>
     {% endfor %}
-    <button class="btn btn-light" type="submit" onclick="superTeste()">Registrar</button>
-    <button class="btn btn-light" type="button" onclick="inserirExercicio()">Inserir Exercicio</button>
+    <button class="btn btn-light" type="submit">Registrar</button>
 </form>
 
 <script type="text/javascript">
@@ -127,8 +120,8 @@ function removerExercicio(botao){
     tabela.deleteRow(botao.parentNode.parentNode.rowIndex);
 }
 
-function adicionarExercicio(botao){
-    const modelo = document.getElementById('linha_modelo');
+function adicionarExercicio(botao, dia){
+    const modelo = document.getElementById('linha_modelo_' + dia);
     const clone = modelo.cloneNode(true);
     clone.hidden = false;
     var table = botao.parentNode.parentNode.parentNode.parentNode;

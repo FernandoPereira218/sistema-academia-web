@@ -21,6 +21,8 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 dias_semana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
+
+
 # current_user = None
 # Create your views here.
 def login_page(request):
@@ -183,18 +185,15 @@ def criar_treino(request, id_aluno):
         lista_exercicios.append(exercicio)
     dados = {
         'aluno': temp,
-        'exercicios': lista_exercicios
+        'exercicios': lista_exercicios,
+        'dias_semana': dias_semana
     }
     return render(request, 'add_practice.html', dados)
 
 
 def submit_treino(request, id_aluno):
     if request.POST:
-        exercicios = request.POST.getlist('exercicios')
-        series = request.POST.getlist('series')
-        repeticoes = request.POST.getlist('repeticoes')
-        diaSemana = request.POST.get('dia_semana')
-
+        dias = request.POST.getlist('dia_semana')
         aluno = db.collection('Aluno').document(id_aluno).get()
         temp = Aluno(
             username=aluno.get('username'),
@@ -207,14 +206,19 @@ def submit_treino(request, id_aluno):
             temp.treinamento = aluno.get('treinamento')
         except:
             pass
-        temp.treinamento[diaSemana] = []
-        for i in range(len(exercicios)):
-            temp.treinamento[diaSemana].append({
-                'Exercicio': exercicios[i],
-                'Series': series[i],
-                'Repeticoes': repeticoes[i],
-            })
-
+        for dia in dias:
+            temp.treinamento[dia] = []
+            exercicios = request.POST.getlist('exercicios_' + dia)
+            series = request.POST.getlist('series_' + dia)
+            repeticoes = request.POST.getlist('repeticoes_' + dia)
+            for i in range(len(exercicios)):
+                if i == 0:
+                    continue
+                temp.treinamento[dia].append({
+                    'Exercicio': exercicios[i],
+                    'Series': series[i],
+                    'Repeticoes': repeticoes[i],
+                })
     objeto = temp.converter_objeto()
     doc_ref = db.collection('Aluno').document(id_aluno)
     doc_ref.set(objeto)
@@ -246,4 +250,5 @@ def alterar_treino(request, id_aluno):
 
 
 def submit_alterar_treino(request, id_aluno):
-    pass
+    submit_treino(request, id_aluno)
+    return redirect('/consulta_aluno/' + id_aluno)
