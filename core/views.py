@@ -20,7 +20,7 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-
+dias_semana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
 # current_user = None
 # Create your views here.
 def login_page(request):
@@ -161,7 +161,7 @@ def buscar_aluno(request, id_aluno):
     except:
         pass
     dados['aluno'] = temp
-    dados['dias_semana'] = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
+    dados['dias_semana'] = dias_semana
     return render(request, 'student_page.html', dados)
 
 
@@ -232,6 +232,18 @@ def alterar_treino(request, id_aluno):
     )
     temp.treinamento = aluno.get('treinamento')
 
+    exercicios = db.collection('Exercicio').get()
+    lista_exercicios = []
+    for doc in exercicios:
+        exercicio = Exercicio()
+        exercicio.nome = doc.get('Nome')
+        lista_exercicios.append(exercicio)
     dados = {}
     dados['aluno'] = temp
+    dados['dias_semana'] = dias_semana
+    dados['exercicios'] = lista_exercicios
     return render(request, 'alter_practice.html', dados)
+
+
+def submit_alterar_treino(request, id_aluno):
+    pass

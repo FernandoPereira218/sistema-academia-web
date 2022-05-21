@@ -60,41 +60,39 @@
             <td>
                 <input class="form-control form-control" type="number" name="repeticoes">
             </td>
+            <td>
+                <button class="btn btn-danger" type="button" onclick="removerExercicio(this)">X</button>
+            </td>
         </tr>
     </table>
     </div>
     <br>
     <button class="btn btn-light" type="submit" onclick="superTeste()">Registrar</button>
     <button class="btn btn-light" type="button" onclick="inserirExercicio()">Inserir Exercicio</button>
+    <button class="btn btn-light" type="button" onclick="history.back()">Voltar</button>
 </form>
 
 <script type="text/javascript">
-
+var counter = 0;
 function inserirExercicio(){
     const elementos = document.getElementsByName('linhas');
     var count = elementos.length;
     const linha = document.getElementById("linhas");
     const clone = linha.cloneNode(true);
+    clone.setAttribute('id', 'linhas_' + counter);
+    counter++;
 
     const tabela = document.getElementById("tabela");
     tabela.appendChild(clone);
 }
 
-function superTeste(){
-    const elementos = document.getElementsByName('linhas');
-    var resultado = '';
-    var array = [];
-    for(var i = 0; i < elementos.length; i++){
-        console.log(elementos[i].children[0].children[0]);
-        //var exercicio = elementos[i].getElementById('id_select');
-        array.push({
-            'Exercicio': elementos[i].children[0].children[0].value,
-            'Series': elementos[i].children[1].children[0].value,
-            'Repeticoes': elementos[i].children[2].children[0].value,
-        });
+
+function removerExercicio(botao){
+    var tabela = document.getElementById('tabela');
+    if(tabela.rows.length == 2){
+        return;
     }
-    //const testes = document.getElementById('testes');
-    // testes.value = array;
+    tabela.deleteRow(botao.parentNode.parentNode.rowIndex);
 }
 
 
