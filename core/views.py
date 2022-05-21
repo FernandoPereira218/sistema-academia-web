@@ -271,3 +271,42 @@ def deletar_treino(request, id_aluno):
     updated_doc = db.collection('Aluno').document(id_aluno)
     updated_doc.set(objeto)
     return redirect('/consulta_aluno/' + id_aluno)
+
+
+def consultar_exercicios(request):
+    exercicios_ref = db.collection('Exercicio').get()
+    exercicios = []
+    for ex in exercicios_ref:
+        temp = Exercicio(nome=ex.get('Nome'))
+        exercicios.append(temp)
+
+    dados = {
+        'exercicios': exercicios
+    }
+    return render(request, 'manage_exercises.html', dados)
+
+
+def submit_exercicios(request):
+    if request.POST:
+        exercicios_atualizados = request.POST.getlist('nome_exercicio')
+        exercicios_no_banco = db.collection('Exercicio').get()
+        lista_exercicios_no_banco = []
+
+        for ex in exercicios_no_banco:
+            lista_exercicios_no_banco.append(ex.get('Nome'))
+
+        for exercicio in exercicios_atualizados:
+            if exercicio == '' or exercicio in lista_exercicios_no_banco:
+                continue
+
+            temp = Exercicio(nome=exercicio).converter_objeto()
+            doc_ref = db.collection('Exercicio').document()
+            doc_ref.set(temp)
+
+        for exercicio in lista_exercicios_no_banco:
+            if exercicio not in exercicios_atualizados:
+                query = db.collection('Exercicio').where('Nome', '==', exercicio).get()
+                if len(query) != 0:
+                    db.collection('Exercicio').document(query[0].id).delete()
+
+    return redirect('/principal')
