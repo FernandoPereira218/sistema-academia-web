@@ -1,4 +1,15 @@
 class Treino:
+    def __init__(self):
+        self.treinamentos = {
+            "Segunda": [],
+            "Terça": [],
+            "Quarta": [],
+            "Quinta": [],
+            "Sexta": [],
+            "Sábado": [],
+            "Domingo": [],
+        }
+
     def __self__(self, exercicios):
         self.exercicios = exercicios
 

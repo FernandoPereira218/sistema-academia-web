@@ -19,6 +19,7 @@
         }
 
 
+
     </style>
 </head>
 <body>
@@ -78,7 +79,22 @@
     <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/criar_treino">Criar Treino</a>
     <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/alterar_treino">Alterar Treino</a>
     <a class="btn btn-secondary" href="">Gerar PDF</a>
+    <a class="btn btn-secondary" onclick="confirmarDelecao()">Deletar Treino</a>
+    <a class="btn btn-secondary" id="btn_deletar_aluno" href="/consulta_aluno/{{ aluno.id }}/deletar_treino" hidden></a>
 </form>
+<script>
+    function confirmarDelecao() {
+        var response = window.confirm('Tem certeza que deseja excluir o treino deste aluno?');
+        if(response){
+            var botao = document.getElementById('btn_deletar_aluno');
+            console.log(botao);
+            botao.click();
+        }
+        else{
+            return;
+        }
+    }
 
+</script>
 </body>
 </html>

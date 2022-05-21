@@ -37,4 +37,5 @@ urlpatterns = [
     path('consulta_aluno/<id_aluno>/criar_treino/submit', views.submit_treino),
     path('consulta_aluno/<id_aluno>/alterar_treino', views.alterar_treino),
     path('consulta_aluno/<id_aluno>/alterar_treino/submit', views.submit_alterar_treino),
+    path('consulta_aluno/<id_aluno>/deletar_treino', views.deletar_treino),
 ]

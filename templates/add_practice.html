@@ -66,20 +66,6 @@
 </form>
 
 <script type="text/javascript">
-var counter = 0;
-function inserirExercicio(){
-    const elementos = document.getElementsByName('linhas');
-    var count = elementos.length;
-    const linha = document.getElementById("linhas");
-    const clone = linha.cloneNode(true);
-    clone.setAttribute('id', 'linhas_' + counter);
-    counter++;
-
-    const tabela = document.getElementById("tabela");
-    tabela.appendChild(clone);
-}
-
-
 function removerExercicio(botao){
     var tabela = botao.parentNode.parentNode.parentNode.parentNode;
     if(tabela.rows.length == 2){
@@ -96,8 +82,6 @@ function adicionarExercicio(botao, dia){
     var tbody = table.getElementsByTagName('tbody')[0];
     tbody.appendChild(clone);
 }
-
-
 </script>
 </body>
 </html>

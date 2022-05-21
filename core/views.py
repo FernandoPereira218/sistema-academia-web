@@ -14,6 +14,7 @@ from classes.Aluno import Aluno
 from classes.Exercicio import Exercicio
 from classes.Pessoa import Pessoa
 from classes.Professor import Professor
+from classes.Treino import Treino
 
 cred = credentials.Certificate('sistema-academia-db-auth.json')
 firebase_admin.initialize_app(cred)
@@ -251,4 +252,22 @@ def alterar_treino(request, id_aluno):
 
 def submit_alterar_treino(request, id_aluno):
     submit_treino(request, id_aluno)
+    return redirect('/consulta_aluno/' + id_aluno)
+
+
+def deletar_treino(request, id_aluno):
+    doc_ref = db.collection('Aluno').document(id_aluno).get()
+    aluno = Aluno(
+        username=doc_ref.get('username'),
+        nome=doc_ref.get('nome'),
+        cpf=doc_ref.get('cpf'),
+        email=doc_ref.get('email'),
+        senha=doc_ref.get('senha')
+    )
+    aluno.treinamento = doc_ref.get('treinamento')
+    aluno.treinamento = Treino().treinamentos
+
+    objeto = aluno.converter_objeto()
+    updated_doc = db.collection('Aluno').document(id_aluno)
+    updated_doc.set(objeto)
     return redirect('/consulta_aluno/' + id_aluno)
