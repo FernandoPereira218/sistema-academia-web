@@ -1,10 +1,11 @@
 class Pessoa:
-    def __init__(self, username, nome, cpf, email, senha):
+    def __init__(self, username, nome, cpf, email, senha, matricula):
         self.username = username
         self.nome = nome
         self.cpf = cpf
         self.email = email
         self.senha = senha
+        self.matricula = matricula
 
     def converter_objeto(self):
         return {
@@ -23,3 +24,4 @@ class Pessoa:
         self.email = dados.get('email')
         self.senha = dados.get('senha')
         self.username = dados.get('username')
+        self.matricula = dados.get('matricula')

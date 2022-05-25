@@ -114,7 +114,8 @@ def set_current_user(data, permissao, id):
         senha=data.get('senha'),
         cpf=data.get('cpf'),
         email=data.get('email'),
-        nome=data.get('nome')
+        nome=data.get('nome'),
+        matricula=data.get('matricula'),
     )
     usuario.permissao = permissao
     usuario.id = id
@@ -139,7 +140,8 @@ def consultar_aluno(request):
             nome=doc.get('nome'),
             senha=doc.get('senha'),
             cpf=doc.get('cpf'),
-            email=doc.get('email')
+            email=doc.get('email'),
+            matricula=doc.get('matricula'),
         )
         temp.id = doc.id
         lista.append(temp)
@@ -206,7 +208,8 @@ def submit_treino(request, id_aluno):
             nome=aluno.get('nome'),
             senha=aluno.get('senha'),
             cpf=aluno.get('cpf'),
-            email=aluno.get('email')
+            email=aluno.get('email'),
+            matricula=aluno.get('matricula')
         )
         try:
             temp.treinamento = aluno.get('treinamento')
@@ -266,8 +269,10 @@ def deletar_treino(request, id_aluno):
         nome=doc_ref.get('nome'),
         cpf=doc_ref.get('cpf'),
         email=doc_ref.get('email'),
-        senha=doc_ref.get('senha')
+        senha=doc_ref.get('senha'),
+        matricula=doc_ref.get('matricula')
     )
+    aluno.permissao = 'aluno'
     aluno.treinamento = doc_ref.get('treinamento')
     aluno.treinamento = Treino().treinamentos
 

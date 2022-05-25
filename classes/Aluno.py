@@ -24,6 +24,7 @@ class Aluno(Pessoa):
         }
         self.permissao = 'aluno'
 
+
     @register.filter
     def get_treino(self, dia_semana):
         temp = core.views.db.collection('Aluno').document(self.id).get()
