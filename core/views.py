@@ -144,8 +144,9 @@ def consultar_aluno(request):
         temp.id = doc.id
         lista.append(temp)
     dados = {
-        'student_list': lista
+        'student_list': lista,
     }
+    print(manage.current_user)
     return render(request, 'search_student.html', dados)
 
 
@@ -169,6 +170,7 @@ def buscar_aluno(request, id_aluno):
         pass
     dados['aluno'] = temp
     dados['dias_semana'] = dias_semana
+    dados['current_user'] = manage.current_user
     return render(request, 'student_page.html', dados)
 
 
@@ -185,8 +187,7 @@ def criar_treino(request, id_aluno):
     exercicios = db.collection('Exercicio').get()
     lista_exercicios = []
     for doc in exercicios:
-        exercicio = Exercicio()
-        exercicio.nome = doc.get('Nome')
+        exercicio = Exercicio(nome=doc.get('Nome'))
         lista_exercicios.append(exercicio)
     dados = {
         'aluno': temp,
@@ -244,8 +245,7 @@ def alterar_treino(request, id_aluno):
     exercicios = db.collection('Exercicio').get()
     lista_exercicios = []
     for doc in exercicios:
-        exercicio = Exercicio()
-        exercicio.nome = doc.get('Nome')
+        exercicio = Exercicio(nome=doc.get('Nome'))
         lista_exercicios.append(exercicio)
     dados = {}
     dados['aluno'] = temp

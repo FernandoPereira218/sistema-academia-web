@@ -20,6 +20,7 @@
 
 
 
+
     </style>
 </head>
 <body>
@@ -34,9 +35,11 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
             </li>
+            {% if current_user.permissao != 'aluno' %}
             <li class="nav-item">
                 <a class="nav-link" href="/consulta_aluno/">Consultar aluno</a>
             </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
@@ -75,11 +78,12 @@
     </div>
     {% endfor %}
 
-
+    {% if current_user.permissao != 'aluno' %}
     <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/criar_treino">Criar Treino</a>
     <a class="btn btn-secondary" href="/consulta_aluno/{{ aluno.id }}/alterar_treino">Alterar Treino</a>
     <a class="btn btn-secondary" href="">Gerar PDF</a>
     <a class="btn btn-secondary" onclick="confirmarDelecao()">Deletar Treino</a>
+    {% endif %}
     <a class="btn btn-secondary" id="btn_deletar_aluno" href="/consulta_aluno/{{ aluno.id }}/deletar_treino" hidden></a>
 </form>
 <script>
@@ -94,6 +98,7 @@
             return;
         }
     }
+
 
 </script>
 </body>
