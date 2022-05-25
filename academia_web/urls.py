@@ -22,7 +22,6 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.login_page),
-    path('teste/', views.teste_db),
     path('login/submit', views.submit_login),
     path('principal/', views.main_page),
     path('', RedirectView.as_view(url='/login/')),

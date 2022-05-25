@@ -22,6 +22,7 @@ class Aluno(Pessoa):
             "Sábado": [],
             "Domingo": [],
         }
+        self.permissao = 'aluno'
 
     @register.filter
     def get_treino(self, dia_semana):
