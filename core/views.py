@@ -41,7 +41,6 @@ dias_semana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Dom
 # current_user = None
 # Create your views here.
 def login_page(request):
-    utils.criar_matricula()
     return render(request, 'login_page.html')
 
 
@@ -124,7 +123,10 @@ def set_current_user(data, permissao, id):
 
 
 def cadastrar_aluno(request):
-    return render(request, 'register_student.html')
+    dados = {
+        'tipo_usuario': 'aluno'
+    }
+    return render(request, 'create_new_user_page.html', dados)
 
 
 def submit_aluno(request):
