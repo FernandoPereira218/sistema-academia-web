@@ -91,9 +91,10 @@ def submit_user(request, db_collection='Professor'):
 
         if password == confirm_password:
             if db_collection == 'Professor':
-                pessoa = Professor(nome=name, cpf=cpf, email=email, senha=password, username=username)
+                pessoa = Professor(nome=name, cpf=cpf, email=email, senha=password, username=username,
+                                   matricula=username + '.professor')
             else:
-                pessoa = Aluno(nome=name, cpf=cpf, email=email, senha=password, username=username)
+                pessoa = Aluno(nome=name, cpf=cpf, email=email, senha=password, username=username, matricula=utils.criar_matricula())
             obj = pessoa.converter_objeto()
             doc_ref = db.collection(db_collection).document()
             doc_ref.set(obj)
@@ -319,3 +320,61 @@ def submit_exercicios(request):
                     db.collection('Exercicio').document(query[0].id).delete()
 
     return redirect('/principal')
+
+
+def consultar_professor(request):
+    doc_professores = db.collection('Professor').get()
+    lista_professores = []
+    for doc in doc_professores:
+        temp = Professor(
+            nome=doc.get('nome'),
+            cpf=doc.get('cpf'),
+            username=doc.get('username'),
+            senha=doc.get('senha'),
+            matricula=doc.get('matricula'),
+            email=doc.get('email')
+        )
+        temp.id = doc.id
+        lista_professores.append(temp)
+    dados = {}
+    dados['professores'] = lista_professores
+    return render(request, 'manage_teachers.html', dados)
+
+
+def deletar_professor(request, id_professor):
+    doc_professores = db.collection('Professor').get()
+    lista_professores = []
+    for doc in doc_professores:
+        if doc.id == id_professor:
+            db.collection('Professor').document(id_professor).delete()
+        else:
+            temp = Professor(
+                nome=doc.get('nome'),
+                cpf=doc.get('cpf'),
+                username=doc.get('username'),
+                senha=doc.get('senha'),
+                matricula=doc.get('matricula'),
+                email=doc.get('email')
+            )
+            temp.id = doc.id
+            lista_professores.append(temp)
+    dados = {
+        'professores': lista_professores
+    }
+    return redirect('/gerenciar_professores')
+
+
+def consultar_admin(request):
+    pass
+
+
+def cadastrar_professor(request):
+    dados = {
+        'tipo_usuario': 'professor'
+    }
+    return render(request, 'create_new_user_page.html', dados)
+
+
+def submit_professor(request):
+    submit_user(request, 'Professor')
+    return redirect('/')

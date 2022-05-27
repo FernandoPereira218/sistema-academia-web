@@ -40,7 +40,12 @@
             <a class="nav-item nav-link" href="/exercicios/">Exercicios</a>
             {% endif %}
             {% if current_user.permissao == 'aluno' %}
-            <a id="btnPaginaAluno" class="nav-item nav-link" onclick="abrirPaginaAluno('{{current_user.id}}')" href="/consulta_aluno/{{current_user.id}}">Página Aluno</a>
+            <a id="btnPaginaAluno" class="nav-item nav-link" href="/consulta_aluno/{{current_user.id}}">Página Aluno</a>
+            {% endif %}
+
+            {% if current_user.permissao == 'admin' %}
+            <a class="nav-item nav-link" href="/gerenciar_professores/">Gerenciar Professores</a>
+            <a class="nav-item nav-link" href="/gerenciar_admin/">Gerenciar Admin</a>
             {% endif %}
         </div>
     </div>
@@ -48,9 +53,6 @@
 <h1>Tela Principal {{ current_user.username }} </h1>
 <br>
 <script>
-function abrirPaginaAluno(id_aluno){
-    console.log(id_aluno);
-}
 
 $(function () {
     if ($("#btnPaginaAluno").is(":visible")) {

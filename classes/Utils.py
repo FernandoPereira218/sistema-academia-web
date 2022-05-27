@@ -8,6 +8,10 @@ class Utils:
         valor_nova_matricula = doc_ref[0].get('nova_matricula')
         matricula_final = f'{matricula}{valor_nova_matricula}'
         valor_nova_matricula += 1
+        obj = core.views.db.collection('ID_Matricula').document(doc_ref[0].id)
+        obj.set({
+            'nova_matricula': valor_nova_matricula
+        })
         return matricula_final
 
 

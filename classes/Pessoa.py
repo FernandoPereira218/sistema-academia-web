@@ -14,8 +14,8 @@ class Pessoa:
             "email": self.email,
             "senha": self.senha,
             "username": self.username,
-            "treinamento": self.treinamento,
             "permissao": self.permissao,
+            "matricula": self.matricula,
         }
 
     def converter_json(self, dados):

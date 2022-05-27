@@ -9,7 +9,7 @@
 <body>
 <h1 align="center">Cadastro</h1>
 <div align="center">
-    <form action="submit_user" method="POST"> {% csrf_token %}
+    <form action="submit_{{ tipo_usuario }}" method="POST"> {% csrf_token %}
         <label>Nome de usuário:</label>
         <input type="text" name="username">
         <br>
