@@ -163,7 +163,8 @@ def buscar_aluno(request, id_aluno):
         nome=doc_ref.get('nome'),
         senha=doc_ref.get('senha'),
         cpf=doc_ref.get('cpf'),
-        email=doc_ref.get('email')
+        email=doc_ref.get('email'),
+        matricula=doc_ref.get('matricula')
     )
     temp.id = doc_ref.id
 
@@ -242,7 +243,8 @@ def alterar_treino(request, id_aluno):
         nome=aluno.get('nome'),
         cpf=aluno.get('cpf'),
         email=aluno.get('email'),
-        senha=aluno.get('senha')
+        senha=aluno.get('senha'),
+        matricula=aluno.get('matricula'),
     )
     temp.treinamento = aluno.get('treinamento')
 
