@@ -382,3 +382,26 @@ def cadastrar_professor(request):
 def submit_professor(request):
     submit_user(request, 'Professor')
     return redirect('/')
+
+
+def deletar_aluno(request, id_aluno):
+    doc_alunos = db.collection('Aluno').get()
+    lista_alunos = []
+    for doc in doc_alunos:
+        if doc.id == id_aluno:
+            db.collection('Aluno').document(id_aluno).delete()
+        else:
+            temp = Professor(
+                nome=doc.get('nome'),
+                cpf=doc.get('cpf'),
+                username=doc.get('username'),
+                senha=doc.get('senha'),
+                matricula=doc.get('matricula'),
+                email=doc.get('email')
+            )
+            temp.id = doc.id
+            lista_alunos.append(temp)
+    dados = {
+        'student_list': lista_alunos
+    }
+    return redirect('/consulta_aluno')
