@@ -22,7 +22,6 @@ class Utils:
         })
         return matricula_final
 
-
     def buscar_ano_semestre(self):
         data_atual = datetime.datetime.now()
         semestre = 0
@@ -34,7 +33,6 @@ class Utils:
         ano_semestre = f'{ano}{semestre}'
         return ano_semestre
 
-
     def html_pdf(self, template_src, context_dict={}):
         template = get_template(template_src)
         html = template.render(context_dict)
@@ -43,7 +41,6 @@ class Utils:
         if not pdf.err:
             return HttpResponse(result.getvalue(), content_type='application/pdf')
         return None
-
 
     def gerar_pdf(self, request, id_aluno):
         aluno_ref = core.views.db.collection('Aluno').document(id_aluno).get()
@@ -60,9 +57,6 @@ class Utils:
         dados['aluno'] = aluno
         dados['dias_semana'] = core.views.dias_semana
         open('templates/temp.html', "w", encoding="UTF-8").write(render_to_string('student_practice_pdf_template.html', dados))
-
-        # Converting the HTML template into a PDF file
         pdf = self.html_pdf('temp.html')
 
-        # rendering the template
         return pdf
