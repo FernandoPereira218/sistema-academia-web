@@ -128,14 +128,16 @@
             <thead>
             <tr>
                 <th scope="col">Alunos</th>
+                <th scope="col">Matricula</th>
                 <th scope="col">Funcoes</th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
             {% for student in student_list %}
-
             <tr>
                 <td>{{student.username}}</td>
+                <td>{{student.matricula}}</td>
                 <td><a href="/consulta_aluno/{{ student.id }}">Acessar</a></td>
                 <td>
                     <button class="btn btn-danger" onclick="confirmarDelecao('{{ student.id }}')">X</button>

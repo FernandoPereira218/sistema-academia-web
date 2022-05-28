@@ -1,2 +1,4 @@
 sistema-academia-db-auth.json
 *.pyc
+
+templates/temp.html

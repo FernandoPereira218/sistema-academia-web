@@ -1,4 +1,6 @@
 import json
+import mimetypes
+import os
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -190,7 +192,8 @@ def criar_treino(request, id_aluno):
         nome=doc_ref.get('nome'),
         senha=doc_ref.get('senha'),
         cpf=doc_ref.get('cpf'),
-        email=doc_ref.get('email')
+        email=doc_ref.get('email'),
+        matricula=doc_ref.get('matricula')
     )
     temp.id = doc_ref.id
     exercicios = db.collection('Exercicio').get()
@@ -458,3 +461,18 @@ def deletar_admin(request, id_admin):
         'admins': lista_admins
     }
     return redirect('/gerenciar_admin')
+
+
+def download_pdf(request, id_aluno):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    filename = 'test.txt'
+    filepath = BASE_DIR + '/Files/' + filename
+    path = open(filepath, 'r')
+    mime_type, _ = mimetypes.guess_type(filepath)
+    response = HttpResponse(path, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response
+
+def converter_pdf(request, id_aluno):
+    pdf = utils.gerar_pdf(request, id_aluno)
+    return HttpResponse(pdf, content_type='application/pdf')
