@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 import manage
+from classes.Admin import Admin
 from classes.Aluno import Aluno
 from classes.Exercicio import Exercicio
 from classes.Pessoa import Pessoa
@@ -92,8 +93,10 @@ def submit_user(request, db_collection='Professor'):
             if db_collection == 'Professor':
                 pessoa = Professor(nome=name, cpf=cpf, email=email, senha=password, username=username,
                                    matricula=username + '.professor')
+            elif db_collection == 'Admin':
+                pessoa = Admin(nome=name, cpf=cpf, email=email, senha=password, username=username, matricula='adm_' + username)
             else:
-                pessoa = Aluno(nome=name, cpf=cpf, email=email, senha=password, username=username, matricula=utils.criar_matricula())
+                pessoa = Aluno(nome=name, cpf=cpf, email=email, senha=password, username=username, matricula='alu' + utils.criar_matricula())
             obj = pessoa.converter_objeto()
             doc_ref = db.collection(db_collection).document()
             doc_ref.set(obj)
@@ -369,7 +372,22 @@ def deletar_professor(request, id_professor):
 
 
 def consultar_admin(request):
-    pass
+    doc_admins = db.collection('Admin').get()
+    lista_admins = []
+    for doc in doc_admins:
+        temp = Professor(
+            nome=doc.get('nome'),
+            cpf=doc.get('cpf'),
+            username=doc.get('username'),
+            senha=doc.get('senha'),
+            matricula=doc.get('matricula'),
+            email=doc.get('email')
+        )
+        temp.id = doc.id
+        lista_admins.append(temp)
+    dados = {}
+    dados['admins'] = lista_admins
+    return render(request, 'manage_admin.html', dados)
 
 
 def cadastrar_professor(request):
@@ -391,7 +409,7 @@ def deletar_aluno(request, id_aluno):
         if doc.id == id_aluno:
             db.collection('Aluno').document(id_aluno).delete()
         else:
-            temp = Professor(
+            temp = Aluno(
                 nome=doc.get('nome'),
                 cpf=doc.get('cpf'),
                 username=doc.get('username'),
@@ -405,3 +423,38 @@ def deletar_aluno(request, id_aluno):
         'student_list': lista_alunos
     }
     return redirect('/consulta_aluno')
+
+
+def cadastrar_admin(request):
+    dados = {
+        'tipo_usuario': 'admin'
+    }
+    return render(request, 'create_new_user_page.html', dados)
+
+
+def submit_admin(request):
+    submit_user(request, 'Admin')
+    return redirect('/')
+
+
+def deletar_admin(request, id_admin):
+    doc_admins = db.collection('Admin').get()
+    lista_admins = []
+    for doc in doc_admins:
+        if doc.id == id_admin:
+            db.collection('Admin').document(id_admin).delete()
+        else:
+            temp = Admin(
+                nome=doc.get('nome'),
+                cpf=doc.get('cpf'),
+                username=doc.get('username'),
+                senha=doc.get('senha'),
+                matricula=doc.get('matricula'),
+                email=doc.get('email')
+            )
+            temp.id = doc.id
+            lista_admins.append(temp)
+    dados = {
+        'admins': lista_admins
+    }
+    return redirect('/gerenciar_admin')
