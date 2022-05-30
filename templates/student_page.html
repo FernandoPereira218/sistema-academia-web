@@ -15,45 +15,28 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand">Sistema de Academia</a>
     </nav>
-    <h1>Teste</h1>
-
     <div class="container-fluid">
         <div class="row">
             <nav class="col-md-2 d-none d-md-block sidebar h-100" id="sidebar">
                 <div class="siderbar-sticky navbar-nav">
                     {% if current_user.permissao != 'aluno' %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/consulta_aluno/">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class=" feather feather-file">
-                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                <polyline points="13 2 13 9 20 9"></polyline>
-                            </svg> Consultar aluno </a>
-                    </li>
+                    <a class="nav-item nav-link" href="/cadastro_aluno/">Cadastrar Aluno</a>
+                    <a class="nav-item nav-link" href="/consulta_aluno/">Consultar Aluno</a>
+                    <a class="nav-item nav-link" href="/cadastro/">Cadastro</a>
+                    <a class="nav-item nav-link" href="/exercicios/">Exercicios</a>
                     {% endif %}
-
-                    {% if current_user.permissao != 'aluno' %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/exercicios/">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class=" feather feather-file">
-                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                <polyline points="13 2 13 9 20 9"></polyline>
-                            </svg> Adicionar Exercicio </a>
-                    </li>
+                    {% if current_user.permissao == 'admin' %}
+                    <a class="nav-item nav-link" href="/gerenciar_professores/">Gerenciar Professores</a>
+                    <a class="nav-item nav-link" href="/gerenciar_admin/">Gerenciar Admin</a>
                     {% endif %}
+                    <hr>
+                    <a class="nav-item nav-link" href="/logout">Fazer Logout</a>
                 </div>
             </nav>
         </div>
         <form class="formulario">
             <h1 class="text-center">Ficha de {{ aluno.username }}</h1>
-            <p class="text-center">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar
-                um
-                PDF ou
-                editar o treino clicando nos <b>botões abaixo</b></p>
-
+            <p class="text-center">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um PDF ou editar o treino clicando nos <b>botões abaixo</b></p>
             {% for dia in dias_semana %}
             <div>
                 <table class="table table-dark table-borderless">
@@ -66,7 +49,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         {% for teste, treino in aluno.treinamento.items %}
                         {% if teste == dia %}
                         {% for exercicio in treino %}
@@ -77,31 +59,28 @@
                         </tr>
                         {% endfor %}
                         {% endif %}
-                        {% endfor %}
-
+                        {% endfor %}    
                     </tbody>
                 </table>
             </div>
             {% endfor %}
-
-            {% if current_user.permissao != 'aluno' %}
             <div class="d-flex justify-content-end">
                 <div class="me-2">
+                    {% if current_user.permissao != 'aluno' %}
                     <a class="btn btn-success" href="/consulta_aluno/{{ aluno.id }}/criar_treino">Criar
                         Treino</a>
                     <a class="btn btn-primary" href="/consulta_aluno/{{ aluno.id }}/alterar_treino">Alterar
                         Treino</a>
-                    <a class="btn btn-danger" href="/consulta_aluno/{{ aluno.id }}/download" target="_blank">Gerar PDF</a>
                     <a class="btn btn-danger" on click="confirmarDelecao()">Deletar Treino</a>
+                    {% endif %}
+                    <a class="btn btn-danger" href="/consulta_aluno/{{ aluno.id }}/download" target="_blank">Gerar
+                        PDF</a>
                 </div>
-                
             </div>
-            
-            {% endif %}
+            {% if current_user.permissao != 'aluno' %}
             <a class="btn btn-secondary" id="btn_deletar_aluno" href="/consulta_aluno/{{ aluno.id }}/deletar_treino"
                 hidden></a>
-
-
+            {% endif %}
         </form>
     </div>
     <script>

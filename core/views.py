@@ -155,6 +155,7 @@ def consultar_aluno(request):
         lista.append(temp)
     dados = {
         'student_list': lista,
+        'current_user': manage.current_user
     }
     print(manage.current_user)
     return render(request, 'search_student.html', dados)
@@ -301,7 +302,8 @@ def consultar_exercicios(request):
         exercicios.append(temp)
 
     dados = {
-        'exercicios': exercicios
+        'exercicios': exercicios,
+        'current_user': manage.current_user
     }
     return render(request, 'manage_exercises.html', dados)
 
@@ -348,6 +350,7 @@ def consultar_professor(request):
         lista_professores.append(temp)
     dados = {}
     dados['professores'] = lista_professores
+    dados['current_user'] = manage.current_user
     return render(request, 'manage_teachers.html', dados)
 
 
@@ -390,6 +393,7 @@ def consultar_admin(request):
         lista_admins.append(temp)
     dados = {}
     dados['admins'] = lista_admins
+    dados['current_user'] = manage.current_user
     return render(request, 'manage_admin.html', dados)
 
 

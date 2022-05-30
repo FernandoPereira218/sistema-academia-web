@@ -50,4 +50,5 @@ urlpatterns = [
     path('deletar_aluno/<id_aluno>', views.deletar_aluno),
     path('exercicios/', views.consultar_exercicios),
     path('exercicios/submit', views.submit_exercicios),
+
 ]

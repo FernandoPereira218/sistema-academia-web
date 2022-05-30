@@ -1,67 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title>Principal</title>
-
-    <style>
-        .formulario{
-            width: 600px;
-            margin: 200px auto;
-            background-color: #28282a;
-            border-radius: 10px;
-            padding: 20px;
-            color: silver;
-        }
-        body{
-            background-color: black;
-        }
-
-    </style>
-
+    <title>Title</title>
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Sistema de Academia</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/principal/">Home <span class="sr-only">(current)</span></a>
-            {% if current_user.permissao == 'professor' or current_user.permissao == 'admin' %}
-            <a class="nav-item nav-link" href="/cadastro_aluno/">Cadastrar Aluno</a>
-            <a class="nav-item nav-link" href="/consulta_aluno/">Consultar Aluno</a>
-            <a class="nav-item nav-link" href="/cadastro/">Cadastro</a>
-            <a class="nav-item nav-link" href="/exercicios/">Exercicios</a>
-            {% endif %}
-            {% if current_user.permissao == 'aluno' %}
-            <a id="btnPaginaAluno" class="nav-item nav-link" href="/consulta_aluno/{{current_user.id}}">Página Aluno</a>
-            {% endif %}
 
-            {% if current_user.permissao == 'admin' %}
-            <a class="nav-item nav-link" href="/gerenciar_professores/">Gerenciar Professores</a>
-            <a class="nav-item nav-link" href="/gerenciar_admin/">Gerenciar Admin</a>
-            {% endif %}
-            <a class="nav-item nav-link" href="/logout">Fazer Logout</a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Sistema de Academia</a>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar h-100" id="sidebar">
+                <div class="siderbar-sticky navbar-nav">
+                    {% if current_user.permissao != 'aluno' %}
+                    <a class="nav-item nav-link" href="/cadastro_aluno/">Cadastrar Aluno</a>
+                    <a class="nav-item nav-link" href="/consulta_aluno/">Consultar Aluno</a>
+                    <a class="nav-item nav-link" href="/cadastro/">Cadastro</a>
+                    <a class="nav-item nav-link" href="/exercicios/">Exercicios</a>
+                    {% endif %}
+                    {% if current_user.permissao == 'admin' %}
+                    <a class="nav-item nav-link" href="/gerenciar_professores/">Gerenciar Professores</a>
+                    <a class="nav-item nav-link" href="/gerenciar_admin/">Gerenciar Admin</a>
+                    {% endif %}
+                    <hr>
+                    <a class="nav-item nav-link" href="/logout">Fazer Logout</a>
+                </div>
+            </nav>
         </div>
     </div>
-</nav>
-<h1>Tela Principal {{ current_user.username }}</h1>
-<br>
-<script>
+    <script>
+        $(function () {
+            if ($("#btnPaginaAluno").is(":visible")) {
+                var botao = document.getElementById("btnPaginaAluno");
+                botao.click();
+            }
+        });
 
-$(function () {
-    if ($("#btnPaginaAluno").is(":visible")) {
-        var botao = document.getElementById("btnPaginaAluno");
-        botao.click();
-    }
-});
-
-</script>
+    </script>
 </body>
+
 </html>
