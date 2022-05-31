@@ -12,29 +12,8 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand">Sistema de Academia</a>
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="col-md-2 d-none d-md-block sidebar h-100" id="sidebar">
-                <div class="siderbar-sticky navbar-nav">
-                    {% if current_user.permissao != 'aluno' %}
-                    <a class="nav-item nav-link" href="/cadastro_aluno/">Cadastrar Aluno</a>
-                    <a class="nav-item nav-link" href="/consulta_aluno/">Consultar Aluno</a>
-                    <a class="nav-item nav-link" href="/cadastro/">Cadastro</a>
-                    <a class="nav-item nav-link" href="/exercicios/">Exercicios</a>
-                    {% endif %}
-                    {% if current_user.permissao == 'admin' %}
-                    <a class="nav-item nav-link" href="/gerenciar_professores/">Gerenciar Professores</a>
-                    <a class="nav-item nav-link" href="/gerenciar_admin/">Gerenciar Admin</a>
-                    {% endif %}
-                    <hr>
-                    <a class="nav-item nav-link" href="/logout">Fazer Logout</a>
-                </div>
-            </nav>
-        </div>
-        <form class="formulario">
+    {% include 'nav-bar.html' %}
+    <form class="formulario">
             <h1 class="text-center">Ficha de {{ aluno.username }}</h1>
             <p class="text-center">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um PDF ou editar o treino clicando nos <b>botões abaixo</b></p>
             {% for dia in dias_semana %}
@@ -59,7 +38,7 @@
                         </tr>
                         {% endfor %}
                         {% endif %}
-                        {% endfor %}    
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -82,7 +61,6 @@
                 hidden></a>
             {% endif %}
         </form>
-    </div>
     <script>
         function confirmarDelecao() {
             var response = window.confirm('Tem certeza que deseja excluir o treino deste aluno?');
