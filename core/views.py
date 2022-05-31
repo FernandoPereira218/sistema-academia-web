@@ -125,7 +125,8 @@ def set_current_user(data, permissao, id):
 
 def cadastrar_aluno(request):
     dados = {
-        'tipo_usuario': 'aluno'
+        'tipo_usuario': 'aluno',
+        'current_user': manage.current_user
     }
     return render(request, 'create_new_user_page.html', dados)
 
@@ -395,7 +396,8 @@ def consultar_admin(request):
 
 def cadastrar_professor(request):
     dados = {
-        'tipo_usuario': 'professor'
+        'tipo_usuario': 'professor',
+        'current_user': manage.current_user
     }
     return render(request, 'create_new_user_page.html', dados)
 
@@ -430,7 +432,8 @@ def deletar_aluno(request, id_aluno):
 
 def cadastrar_admin(request):
     dados = {
-        'tipo_usuario': 'admin'
+        'tipo_usuario': 'admin',
+        'current_user': manage.current_user
     }
     return render(request, 'create_new_user_page.html', dados)
 
