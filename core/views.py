@@ -74,10 +74,6 @@ def main_page(request):
     return render(request, 'main_page.html', dados)
 
 
-def add_user(request):
-    return render(request, 'create_new_user_page.html')
-
-
 def submit_user(request, db_collection='Professor'):
     if request.POST:
         username = request.POST.get('username')
