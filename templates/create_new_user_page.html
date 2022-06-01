@@ -14,33 +14,39 @@
     {% include 'nav-bar.html' %}
     <form class="formulario" action="submit_{{ tipo_usuario }}" method="POST"> {% csrf_token %}
         <h1 align="center">Cadastro</h1>
-        <div align="center">
-            <label>Nome de usuário:</label>
-            <input type="text" name="username">
-            <br>
-            <label>Nome completo:</label>
-            <input type="text" name="fullname">
-            <br>
-            <label>CPF:</label>
-            <input type="text" name="cpf">
-            <br>
-            <label>Email:</label>
-            <input type="text" name="email">
-            <br>
-            <label>Senha:</label>
-            <input type="password" name="password">
-            <br>
-            <label>Confirmar senha:</label>
-            <input type="password" name="confirm_password">
-            <br>
-            <button type="submit">Cadastrar</button>
-            <br>
-    </form>
-    <form action="/login/" method="get">
-        <button type="submit">Voltar</button>
-    </form>
-    </div>
+        <br>
+        <div align="center" class="form-group mx-sm-5 d-flex">
+            <label class="col-md-4">Nome de usuário:</label>
+            <input class="form-control" type="text" name="username">
+        </div>
+        <div align="center" class="form-group mx-sm-5 d-flex mt-2">
+            <label class="col-md-4">Nome completo:</label>
+            <input class="form-control" type="text" name="fullname">
+        </div>
 
+        <div align="center" class="form-group mx-sm-5 d-flex mt-2">
+            <label class="col-md-4">CPF</label>
+            <input class="form-control" type="text" name="cpf">
+        </div>
+
+        <div align="center" class="form-group mx-sm-5 d-flex mt-2">
+            <label class="col-md-4">Email</label>
+            <input class="form-control" type="text" name="email">
+        </div>
+        <div align="center" class="form-group mx-sm-5 d-flex mt-2">
+            <label class="col-md-4"> Senha </label>
+            <input class="form-control" type="text" name="password">
+        </div>
+        <div align="center" class="form-group mx-sm-5 d-flex mt-2">
+            <label class="col-md-4">Confirmar senha</label>
+            <input class="form-control" type="text" name="confirm_password">
+        </div>
+        <hr>
+        <div align = "center">
+            <button class="btn btn-link mt-2" type="submit">Cadastrar</button>
+        </div>
+        <br>
+    </form>
 </body>
 
 </html>

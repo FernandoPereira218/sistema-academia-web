@@ -13,10 +13,8 @@
     {% include 'nav-bar.html' %}
     <form class="formulario">
         <h1 class="text-center">Alunos</h1>
-        <p class="text-left">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um
-            PDF
-            ou
-            editar o treino clicando nos <b>botões abaixo</b></p>
+        <p class="text-left">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um PDF
+            ou editar o treino clicando nos <b>botões abaixo</b></p>
         <table class="table table-borderless">
             <thead>
                 <tr>
@@ -40,8 +38,9 @@
                 {% endfor %}
             </tbody>
         </table>
-        <div class="d-flex justify-content-end">
-            <a class="btn btn-primary" href="">Adicionar Aluno</a>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-link" href="">Adicionar Aluno</a>
         </div>
 
     </form>
@@ -55,8 +54,6 @@
                 botao.click();
             }
         }
-
-
     </script>
 </body>
 
