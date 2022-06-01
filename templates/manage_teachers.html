@@ -22,7 +22,6 @@
       </thead>
       <tbody>
         {% for professor in professores %}
-
         <tr>
           <td><a href="/consulta_professor/{{ professor.id }}">{{professor.matricula}}</a></td>
           <td><button class="btn btn-danger" onclick="confirmarDelecao('{{ professor.id }}')">X</button></td>
@@ -34,7 +33,6 @@
     <div class="d-flex flex-row-reverse ">
       <a class="btn btn-primary" href="/cadastrar_professor/">Adicionar Professor</a>
     </div>
-
   </form>
   </div>
   </div>

@@ -1,10 +1,9 @@
  .formulario {
-            width: 800px;
-            margin: 50px auto;
-            background-color: #28282a;
-            border-radius: 10px;
+            width: 600px;
+            margin: 200px auto;
+            background-color: #0b0b0b;
+            border-radius: 20px;
             padding: 10px;
-            margin-right: 400px;
             color: silver;
         }
 
@@ -19,7 +18,7 @@
             /* any large number will do */
             padding-bottom: 1080px;
         }
-
+        
         .nav-link {
             color: silver;
         }
@@ -58,23 +57,5 @@
 
 
         @media only screen and (max-width: 1366px) {
-            .formulario {
-                width: 800px;
-                margin: 50px auto;
-                background-color: #28282a;
-                border-radius: 10px;
-                padding: 10px;
-                margin-right: 150px;
-                color: silver;
-            }
-
-            #sidebar {
-                background-color: #141618;
-
-                margin-bottom: -768px;
-                /* any large number will do */
-                padding-bottom: 768px;
-            }
-
 
         }
