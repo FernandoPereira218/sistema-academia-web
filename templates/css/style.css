@@ -56,7 +56,6 @@
             .formulario {
                 width: 800px;
                 margin: 50px auto;
-                background-color: #28282a;
                 border-radius: 10px;
                 padding: 10px;
                 margin-right: 150px;
@@ -64,11 +63,9 @@
             }
 
             #sidebar {
-                background-color: #141618;
-
                 margin-bottom: -947px; 
                 /* any large number will do */
-                 padding-bottom: 947px;
+                padding-bottom: 947px;
             }
 
 
