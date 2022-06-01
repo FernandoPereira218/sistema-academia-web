@@ -11,13 +11,13 @@
 </head>
 
 <body>
+    {% include 'nav-bar.html' %}
     <form class="formulario" method="POST" action="alterar_treino/submit"> {% csrf_token %}
-        {% include 'nav-bar.html' %}
         <h1 class="text-center">Alteração Treino de {{ aluno.username }}</h1>
         {% for dia in dias_semana %}
         <input type="hidden" value="{{ dia }}" name="dia_semana">
         <div>
-            <table class="table table-dark table-borderless" id="tabela">
+            <table class="table table-borderless" id="tabela">
                 <thead>
                     <h3>{{ dia }}</h3>
                     <tr>
@@ -86,9 +86,11 @@
             </table>
         </div>
         {% endfor %}
-        <button class="btn btn-light" type="submit">Registrar</button>
+        <hr>
+        <div align="center">
+            <button class="btn btn-link" type="submit">Registrar</button>
+        </div>
     </form>
-
     <script type="text/javascript">
 
         function inserirExercicio() {
