@@ -1,7 +1,7 @@
  .formulario {
             width: 800px;
             margin: 50px auto;
-            background-color: #28282a;
+            background-color: #0b0b0b;
             border-radius: 10px;
             padding: 10px;
             margin-right: 400px;
@@ -11,10 +11,16 @@
         body {
             background-color: black;
         }
+        .nav{
+            background-color: #0b0b0b;
+            text-decoration: none;
+            color: white;
+            
+        }
 
         #sidebar {
-            background-color: #141618;
-            ;
+            
+            background-color: #0b0b0b;
             margin-bottom: -1080px;
             /* any large number will do */
             padding-bottom: 1080px;
@@ -26,17 +32,6 @@
 
         .nav-link .active {
             color: white;
-        }
-
-        .siderbar {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 100;
-            padding: 0;
-            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-
         }
 
         .navbar-brand {
@@ -71,9 +66,9 @@
             #sidebar {
                 background-color: #141618;
 
-                margin-bottom: -768px;
+                margin-bottom: -947px; 
                 /* any large number will do */
-                padding-bottom: 768px;
+                 padding-bottom: 947px;
             }
 
 

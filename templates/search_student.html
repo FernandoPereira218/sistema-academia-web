@@ -8,46 +8,43 @@
     <link href="{% static 'style.css' %}" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Consulta</title>
-
-
 </head>
-
 <body>
     {% include 'nav-bar.html' %}
-        <form class="formulario">
-            <h1 class="text-center">Alunos</h1>
-            <p class="text-left">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um
-                PDF
-                ou
-                editar o treino clicando nos <b>botões abaixo</b></p>
-            <table class="table table-dark table-borderless">
-                <thead>
-                    <tr>
-                        <th scope="col">Alunos</th>
-                        <th scope="col">Matricula</th>
-                        <th scope="col">Funcoes</th>
-                            <th scope="col"></th>
-                        </tr>
-                </thead>
-                <tbody>
-                    {% for student in student_list %}
-                    <tr>
-                        <td>{{student.username}}</td>
-                        <td>{{student.matricula}}</td>
-                        <td><a href="/consulta_aluno/{{ student.id }}">Acessar</a></td>
-                        <td>
-                            <button class="btn btn-danger" onclick="confirmarDelecao('{{ student.id }}')">X</button>
-                        </td>
-                        <a id="id_{{student.id}}" href="/deletar_aluno/{{ student.id }}" hidden>Remover Aluno</a>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <div class="d-flex justify-content-end">
-                <a class="btn btn-primary" href="">Adicionar Aluno</a>
-            </div>
+    <form class="formulario">
+        <h1 class="text-center">Alunos</h1>
+        <p class="text-left">Aqui contem todos os exercicio dos aluno, suas series e repetições, você pode gerar um
+            PDF
+            ou
+            editar o treino clicando nos <b>botões abaixo</b></p>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">Alunos</th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Funcoes</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in student_list %}
+                <tr>
+                    <td>{{student.username}}</td>
+                    <td>{{student.matricula}}</td>
+                    <td><a href="/consulta_aluno/{{ student.id }}">Acessar</a></td>
+                    <td>
+                        <button class="btn btn-danger" onclick="confirmarDelecao('{{ student.id }}')">X</button>
+                    </td>
+                    <a id="id_{{student.id}}" href="/deletar_aluno/{{ student.id }}" hidden>Remover Aluno</a>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-end">
+            <a class="btn btn-primary" href="">Adicionar Aluno</a>
+        </div>
 
-        </form>
+    </form>
     </div>
     </div>
     <script>
@@ -58,6 +55,7 @@
                 botao.click();
             }
         }
+
 
     </script>
 </body>
