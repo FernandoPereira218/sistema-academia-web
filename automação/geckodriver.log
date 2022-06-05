@@ -1,0 +1,559 @@
+1654277804160	geckodriver	INFO	Listening on 127.0.0.1:49309
+1654277807217	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49310" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileRB2Qx6"
+1654277807654	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49310
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileRB2Qx6\\search.json.mozlz4", (void 0)))
+1654277810018	Marionette	INFO	Listening on port 49333
+DevTools listening on ws://localhost:49310/devtools/browser/d3f58e93-5566-4476-b14a-30b0d845647a
+Read port: 49333
+1654277810135	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654277817751	Marionette	INFO	Stopped listening on port 49333
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 4476, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1654278224986	geckodriver	INFO	Listening on 127.0.0.1:49510
+1654278234477	geckodriver	INFO	Listening on 127.0.0.1:49521
+1654278237526	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49522" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileQoVC5E"
+1654278237873	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49522
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileQoVC5E\\search.json.mozlz4", (void 0)))
+1654278239789	CDP	WARN	Failed to remove undefined (Could not parse path (undefined): NS_ERROR_FILE_UNRECOGNIZED_PATH)
+console.warn: services.settings: main/query-stripping sync interrupted by shutdown
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/TerminatorTelemetry.jsm, line 71: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+1654278242945	geckodriver	INFO	Listening on 127.0.0.1:49554
+1654278246009	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49555" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileTzrEg3"
+1654278246352	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49555
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileTzrEg3\\search.json.mozlz4", (void 0)))
+1654278248277	Marionette	INFO	Listening on port 49575
+DevTools listening on ws://localhost:49555/devtools/browser/71d2b5fc-ad7b-40a2-99e7-37724fbf3298
+Read port: 49575
+1654278248361	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654278264578	Marionette	INFO	Stopped listening on port 49575
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 20136, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1654278422875	geckodriver	INFO	Listening on 127.0.0.1:49800
+1654278425894	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49801" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilecn1Nb2"
+1654278426311	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49801
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilecn1Nb2\\search.json.mozlz4", (void 0)))
+1654278428503	Marionette	INFO	Listening on port 49825
+Read port: 49825
+DevTools listening on ws://localhost:49801/devtools/browser/10ccc29b-6720-4be5-81b7-751ef6f6a53e
+1654278428564	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654278817119	Marionette	INFO	Stopped listening on port 49825
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "49853" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilexTGyxo"
+1654278477477	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49853
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilexTGyxo\\search.json.mozlz4", (void 0)))
+1654278479326	Marionette	INFO	Listening on port 49877
+DevTools listening on ws://localhost:49853/devtools/browser/15f9ddc1-3913-4965-9b0a-745582fea7f1
+Read port: 49877
+1654278479453	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654278817968	Marionette	INFO	Stopped listening on port 49877
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "49912" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileMb73Yf"
+1654278515450	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49912
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileMb73Yf\\search.json.mozlz4", (void 0)))
+1654278517544	Marionette	INFO	Listening on port 49939
+DevTools listening on ws://localhost:49912/devtools/browser/f0afce3e-32ad-4325-b01f-d0a4c5aaf881
+Read port: 49939
+1654278517648	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654278709994	Marionette	INFO	Stopped listening on port 49939
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 15632, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654278730803	geckodriver	INFO	Listening on 127.0.0.1:50010
+1654278734004	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50011" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileVix9B0"
+1654278734322	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:50011
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileVix9B0\\search.json.mozlz4", (void 0)))
+1654278736160	Marionette	INFO	Listening on port 50032
+DevTools listening on ws://localhost:50011/devtools/browser/c175ba54-e1f1-44ac-b622-cdacff4f2b40
+Read port: 50032
+1654278736237	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654278818778	Marionette	INFO	Stopped listening on port 50032
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "50062" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilerQdF0l"
+1654278797242	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:50062
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilerQdF0l\\search.json.mozlz4", (void 0)))
+1654278799406	Marionette	INFO	Listening on port 50087
+DevTools listening on ws://localhost:50062/devtools/browser/8da22719-e139-45ac-925d-4c46e341efd8
+Read port: 50087
+1654278799503	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654278815652	Marionette	INFO	Stopped listening on port 50087
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
+[Parent 5512, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1654278822754	geckodriver	INFO	Listening on 127.0.0.1:50119
+1654278825795	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50120" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofile2PxWHL"
+1654278826145	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:50120
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofile2PxWHL\\search.json.mozlz4", (void 0)))
+1654278828138	Marionette	INFO	Listening on port 50142
+DevTools listening on ws://localhost:50120/devtools/browser/896a9c58-4dd3-4ffd-84e2-f5e17120d9fa
+Read port: 50142
+1654278828264	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1654280061782	Marionette	INFO	Stopped listening on port 50142
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ed
+WebDriver BiDi listening on ws://localhost:50330
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileOWGQGJ\\search.json.mozlz4", (void 0)))
+1654278978496	Marionette	INFO	Listening on port 50359
+Read port: 50359
+1654278978522	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:50330/devtools/browser/62c5bb76-1290-4c9a-bd84-7e31665595e2
+1654279005288	Marionette	INFO	Stopped listening on port 50359
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 17864, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+\\Temp\\rust_mozprofileyG8RxP"
+1654279002369	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:50388
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileyG8RxP\\search.json.mozlz4", (void 0)))
+1654279004522	Marionette	INFO	Listening on port 50411
+DevTools listening on ws://localhost:50388/devtools/browser/2384fb80-6775-4745-9bca-c86689545d7f
+Read port: 50411
+1654279004615	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1654279351050	Marionette	INFO	Stopped listening on port 50411
+[Parent 18248, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+rchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileuOiDcd\\search.json.mozlz4", (void 0)))
+1654279148252	Marionette	INFO	Listening on port 50475
+Read port: 50475
+1654279148296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:50454/devtools/browser/5970aa79-20eb-4fbe-abc3-e64ab614873c
+1654279199541	Marionette	INFO	Stopped listening on port 50475
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ilev7Jxuq"
+1654279174851	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:50505
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilev7Jxuq\\search.json.mozlz4", (void 0)))
+1654279176632	Marionette	INFO	Listening on port 50527
+DevTools listening on ws://localhost:50505/devtools/browser/5bb94efd-30ab-489b-bb5a-72236d8d9c65
+Read port: 50527
+1654279176663	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654279200192	Marionette	INFO	Stopped listening on port 50527
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654279224981	geckodriver	INFO	Listening on 127.0.0.1:50559
+1654279228011	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50560" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileGd4ERh"
+1654279228329	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:50560
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileGd4ERh\\search.json.mozlz4", (void 0)))
+1654279230081	Marionette	INFO	Listening on port 50581
+DevTools listening on ws://localhost:50560/devtools/browser/5095630e-e211-4651-9c6f-2f19d3dfda41
+Read port: 50581
+1654279230144	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654279348765	Marionette	INFO	Stopped listening on port 50581
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ileeAuKPS"
+1654279318561	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52412
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileeAuKPS\\search.json.mozlz4", (void 0)))
+1654279320427	Marionette	INFO	Listening on port 52436
+DevTools listening on ws://localhost:52412/devtools/browser/fdbefb78-6911-4c6b-a0e5-ef0e915a2522
+Read port: 52436
+1654279320503	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654279348157	Marionette	INFO	Stopped listening on port 52436
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654279453479	geckodriver	INFO	Listening on 127.0.0.1:52553
+1654279456530	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52554" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileok5jNd"
+1654279456855	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52554
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileok5jNd\\search.json.mozlz4", (void 0)))
+1654279458817	Marionette	INFO	Listening on port 52577
+Read port: 52577
+1654279458897	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:52554/devtools/browser/f4c44f7a-5702-46e3-8168-393ca8206c94
+1654279488981	Marionette	INFO	Stopped listening on port 52577
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ileqxOGrk"
+1654279484508	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52604
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileqxOGrk\\search.json.mozlz4", (void 0)))
+1654279486315	Marionette	INFO	Listening on port 52627
+DevTools listening on ws://localhost:52604/devtools/browser/e4615271-ed30-4efe-bd5c-6e061fcb616e
+Read port: 52627
+1654279486453	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654279513278	Marionette	INFO	Stopped listening on port 52621654279514725	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52670" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileO6Bpcz"
+1654279515103	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52670
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileO6Bpcz\\search.json.mozlz4", (void 0)))
+1654279517007	Marionette	INFO	Listening on port 52694
+DevTools listening on ws://localhost:52670/devtools/browser/a1769311-e458-4090-bbc2-71a3f8fe624e
+Read port: 52694
+1654279517094	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654279779329	Marionette	INFO	Stopped listening on port 52694
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ileEgsb6y"
+1654279576643	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52723
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileEgsb6y\\search.json.mozlz4", (void 0)))
+1654279578530	Marionette	INFO	Listening on port 52747
+DevTools listening on ws://localhost:52723/devtools/browser/0188e1ab-e017-44b5-8b1c-b6836cd7aa23
+Read port: 52747
+1654279578615	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654279582905	geckodriver	INFO	Listening on 127.0.0.1:52776
+1654279585932	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52777" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileTqTG9f"
+1654279586264	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52777
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileTqTG9f\\search.json.mozlz4", (void 0)))
+1654279588140	Marionette	INFO	Listening on port 52800
+Read port: 52800
+1654279588184	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:52777/devtools/browser/f532c40c-db13-4e01-9098-e97cdc4d1ed1
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654280060970	Marionette	INFO	Stopped listening on port 52800
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 14584, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+\\Temp\\rust_mozprofilerC5V9b"
+1654279776246	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49393
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilerC5V9b\\search.json.mozlz4", (void 0)))
+1654279778222	Marionette	INFO	Listening on port 49415
+DevTools listening on ws://localhost:49393/devtools/browser/f0c3859c-f479-4232-8bbe-0a1077c8aa82
+Read port: 49415
+1654279778284	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654280062424	Marionette	INFO	Stopped listening on port 49415
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1654280302864	geckodriver	INFO	Listening on 127.0.0.1:49369
+1654280305896	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49370" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileh9nvWb"
+1654280306235	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49370
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileh9nvWb\\search.json.mozlz4", (void 0)))
+1654280308206	Marionette	INFO	Listening on port 49395
+Read port: 49395
+DevTools listening on ws://localhost:49370/devtools/browser/2d6e0c89-0040-4cb9-be7b-a8d3db1d927a
+1654280308259	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1654280364141	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49427" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileKGn8o2"
+1654280364520	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49427
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileKGn8o2\\search.json.mozlz4", (void 0)))
+1654280366653	Marionette	INFO	Listening on port 49453
+Read port: 49453
+1654280366732	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:49427/devtools/browser/cd23c7f0-602f-42ad-bcc4-71df53045c6f
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1654280368453	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654280430055	Marionette	INFO	Stopped listening on port 49453
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1654280439043	geckodriver	INFO	Listening on 127.0.0.1:49493
+1654280442077	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49494" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilenFr5sC"
+1654280442432	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49494
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilenFr5sC\\search.json.mozlz4", (void 0)))
+1654280444458	Marionette	INFO	Listening on port 49515
+DevTools listening on ws://localhost:49494/devtools/browser/8e09f3ca-7822-4775-9a2d-7116b6d92e9c
+Read port: 49515
+1654280444544	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654280637645	Marionette	INFO	Stopped listening on port 49515
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 21496, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+\\Temp\\rust_mozprofileba7Gno"
+1654280529538	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49551
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileba7Gno\\search.json.mozlz4", (void 0)))
+1654280531598	Marionette	INFO	Listening on port 49575
+Read port: 49575
+DevTools listening on ws://localhost:49551/devtools/browser/7367d859-3cd4-4946-959e-a55b993a8ef0
+1654280531646	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654280636051	Marionette	INFO	Stopped listening on port 49571654280637604	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49614" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileOFZVAA"
+1654280638043	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49614
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileOFZVAA\\search.json.mozlz4", (void 0)))
+1654280640069	Marionette	INFO	Listening on port 49638
+DevTools listening on ws://localhost:49614/devtools/browser/f20926be-8430-4bb8-bb17-4d9b5beb59ea
+Read port: 49638
+1654280640186	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654281208182	Marionette	INFO	Stopped listening on port 49638
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "49675" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileWYFxYH"
+1654280671684	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49675
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileWYFxYH\\search.json.mozlz4", (void 0)))
+1654280673548	Marionette	INFO	Listening on port 49697
+DevTools listening on ws://localhost:49675/devtools/browser/024943cf-0289-4866-a60c-82a0bc70a006
+Read port: 49697
+1654280673613	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1654281205541	Marionette	INFO	Stopped listening on port 49697
+e-debugging-port" "49748" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileDZTunm"
+1654280954295	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49748
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileDZTunm\\search.json.mozlz4", (void 0)))
+1654280956419	Marionette	INFO	Listening on port 49787
+DevTools listening on ws://localhost:49748/devtools/browser/4fd0c79b-0d81-44e8-aba2-49bf9ebac013
+Read port: 49787
+1654280956548	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1654281208851	Marionette	INFO	Stopped listening on port 49787
+e-debugging-port" "49830" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilegqU6v1"
+1654281082101	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49830
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilegqU6v1\\search.json.mozlz4", (void 0)))
+1654281084290	Marionette	INFO	Listening on port 49854
+DevTools listening on ws://localhost:49830/devtools/browser/5eb1a660-be3f-40e5-8aec-19bd68762729
+Read port: 49854
+1654281084408	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1654281086167	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654281209570	Marionette	INFO	Stopped listening on port 49854
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 19992, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1654281240057	geckodriver	INFO	Listening on 127.0.0.1:58474
+1654281243095	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58475" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilekr98cx"
+1654281243409	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:58475
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilekr98cx\\search.json.mozlz4", (void 0)))
+1654281245298	Marionette	INFO	Listening on port 58495
+Read port: 58495
+1654281245337	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:58475/devtools/browser/9cc99cac-d8ba-42e1-bd32-5c54748789b0
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 186: TypeError: rule is undefined
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 186: TypeError: rule is undefined
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 186: TypeError: rule is undefined
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1654281354211	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58546" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilewiTNQW"
+1654281354545	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:58546
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilewiTNQW\\search.json.mozlz4", (void 0)))
+1654281356636	Marionette	INFO	Listening on port 58568
+Read port: 58568
+1654281356670	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:58546/devtools/browser/f357a94b-0080-46f1-abdd-24627c64735f
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654281825070	Marionette	INFO	Stopped listening on port 58568
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+ileE0mtqX"
+1654281589116	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:58616
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileE0mtqX\\search.json.mozlz4", (void 0)))
+1654281590958	Marionette	INFO	Listening on port 58643
+DevTools listening on ws://localhost:58616/devtools/browser/0e74d5fb-8ba3-4e11-a7e7-f9d6f5a58436
+Read port: 58643
+1654281591028	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1654283919906	Marionette	INFO	Stopped listening on port 58643
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 17584, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+\\Temp\\rust_mozprofileDBNbFq"
+1654283872275	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52114
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileDBNbFq\\search.json.mozlz4", (void 0)))
+1654283874281	Marionette	INFO	Listening on port 52136
+Read port: 52136
+DevTools listening on ws://localhost:52114/devtools/browser/4082e7ee-b3b3-492b-8d81-2cb9a9fa4d54
+1654283874341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1654283876027	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654283918300	Marionette	INFO	Stopped listening on port 52136
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 19516, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654283963592	geckodriver	INFO	Listening on 127.0.0.1:52171
+1654283966620	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52172" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileStnAvd"
+1654283966941	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:52172
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileStnAvd\\search.json.mozlz4", (void 0)))
+1654283968971	Marionette	INFO	Listening on port 52195
+DevTools listening on ws://localhost:52172/devtools/browser/70d18d08-7518-4d11-aa92-0550119a0a08
+Read port: 52195
+1654283969082	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654284231382	Marionette	INFO	Stopped listening on port 52195
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "60714" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileixFRpL"
+1654284108136	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:60714
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileixFRpL\\search.json.mozlz4", (void 0)))
+1654284109987	Marionette	INFO	Listening on port 60734
+DevTools listening on ws://localhost:60714/devtools/browser/f3017e8f-a5e2-4ef2-9dae-a9eabd03602f
+Read port: 60734
+1654284110055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+1654284224362	Marionette	INFO	Stopped listening on port 60734
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 14292, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654284233281	geckodriver	INFO	Listening on 127.0.0.1:60774
+1654284236319	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60775" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileg3UVbh"
+1654284236659	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:60775
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileg3UVbh\\search.json.mozlz4", (void 0)))
+1654284238613	Marionette	INFO	Listening on port 60796
+DevTools listening on ws://localhost:60775/devtools/browser/f2525e1b-7228-49c4-8b4f-a3d19505f713
+Read port: 60796
+1654284238675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654284284086	Marionette	INFO	Stopped listening on port 60791654284284462	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60827" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofile93NxMQ"
+1654284284826	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:60827
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofile93NxMQ\\search.json.mozlz4", (void 0)))
+1654284286976	Marionette	INFO	Listening on port 60859
+Read port: 60859
+DevTools listening on ws://localhost:60827/devtools/browser/f07b6055-4116-4542-a992-e0a2c8b82f21
+1654284287020	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1654284288712	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: resource://gre/modules/PageThumbUtils.jsm, line 353: TypeError: ChromeUtils.getClassName: Argument 1 is not an object.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1654289595248	Marionette	INFO	Stopped listening on port 60859
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 10580, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
