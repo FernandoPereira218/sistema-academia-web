@@ -1,11 +1,11 @@
  .formulario {
             width: 800px;
-            margin: 50px auto;
+            margin: 0px auto;
             background-color: #0b0b0b;
             border-radius: 10px;
             padding: 10px;
             margin-right: 400px;
-            color: silver;
+            color: white !important;
         }
 
         body {
@@ -55,11 +55,12 @@
         @media only screen and (max-width: 1366px) {
             .formulario {
                 width: 800px;
-                margin: 50px auto;
+                margin: 0px auto;
+                background-color: #0b0b0b;
                 border-radius: 10px;
                 padding: 10px;
                 margin-right: 150px;
-                color: silver;
+                color: white;
             }
 
             #sidebar {

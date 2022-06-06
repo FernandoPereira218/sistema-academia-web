@@ -557,3 +557,74 @@ JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeE
 1654289595248	Marionette	INFO	Stopped listening on port 60859
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 [Parent 10580, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1654556331117	geckodriver	INFO	Listening on 127.0.0.1:49410
+1654556334170	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49411" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileghce1e"
+1654556334856	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49411
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileghce1e\\search.json.mozlz4", (void 0)))
+1654556336848	Marionette	INFO	Listening on port 49434
+DevTools listening on ws://localhost:49411/devtools/browser/009c9636-2998-430b-87ba-1f7c2a5d7841
+Read port: 49434
+1654556336987	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+1654556360102	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1654556387614	geckodriver	INFO	Listening on 127.0.0.1:49465
+1654556390638	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49466" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileXfP4nY"
+1654556390940	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:49466
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofileXfP4nY\\search.json.mozlz4", (void 0)))
+1654556392650	Marionette	INFO	Listening on port 49489
+Read port: 49489
+DevTools listening on ws://localhost:49466/devtools/browser/399085c5-34e6-4494-9728-29aeed613edd
+1654556392750	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1654556458790	geckodriver	INFO	Listening on 127.0.0.1:57505
+1654556461815	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57506" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilehidSe2"
+1654556462124	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57506
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\nel_2\\AppData\\Local\\Temp\\rust_mozprofilehidSe2\\search.json.mozlz4", (void 0)))
+1654556463935	Marionette	INFO	Listening on port 57527
+DevTools listening on ws://localhost:57506/devtools/browser/ffa11451-87d1-49e1-9e44-ec378846c3ad
+Read port: 57527
+1654556464065	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://sistema-academia-web.herokuapp.com/principal/, line 35: ReferenceError: $ is not defined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sistema-academia-web.herokuapp.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
