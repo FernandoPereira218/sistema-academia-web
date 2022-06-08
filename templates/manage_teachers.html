@@ -23,7 +23,7 @@
       <tbody>
         {% for professor in professores %}
         <tr>
-          <td><a href="/consulta_professor/{{ professor.id }}">{{professor.matricula}}</a></td>
+          <td><a">{{professor.matricula}}</a></td>
           <td><button class="btn btn-danger" onclick="confirmarDelecao('{{ professor.id }}')">X</button></td>
           <a id="id_{{professor.id}}" href="/deletar_professor/{{ professor.id }}" hidden>Remover Professor</a>
         </tr>

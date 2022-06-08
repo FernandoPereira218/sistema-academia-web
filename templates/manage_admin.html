@@ -22,7 +22,7 @@
             <tbody>
             {% for adm in admins %}
             <tr>
-                <td><a href="/gerenciar_admin/{{ adm.id }}">{{adm.matricula}}</a></td>
+                <td><a>{{adm.matricula}}</a></td>
                 <td><button class="btn btn-danger" onclick="confirmarDelecao('{{ adm.id }}')">X</button></td>
                 <a id="id_{{adm.id}}" href="/deletar_admin/{{ adm.id }}" hidden>Remover Professor</a>
             </tr>
